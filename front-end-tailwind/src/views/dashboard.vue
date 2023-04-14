@@ -1,0 +1,272 @@
+<template>
+    <div class="flex flex-cols bg-gray-100">
+
+            <aside
+                class="flex flex-col w-64  px-5 py-8 overflow-y-auto bg-green-700 border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+                <a href="#">
+                    <img class="w-auto h-20" src="../images/medicare-2.png" alt="">
+                </a>
+
+                <div class="flex flex-col justify-between flex-1 mt-6">
+                    <nav class="-mx-3 space-y-6 ">
+                        <div class="space-y-3 ">
+                            <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">analytics</label>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Dashboard</span>
+                            </a>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Preformance</span>
+                            </a>
+                        </div>
+
+                        <div class="space-y-3 ">
+                            <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">content</label>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Guides</span>
+                            </a>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Hotspots</span>
+                            </a>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Checklists</span>
+                            </a>
+                        </div>
+
+                        <div class="space-y-3 ">
+                            <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">Customization</label>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Themes</span>
+                            </a>
+
+                            <a class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
+                                href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+
+                                <span class="mx-2 text-sm font-medium text-gray-200">Setting</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+    <div class="container mx-auto ">
+        <header class="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-green-700">
+            <div class="flex items-center"><button class="text-gray-500 focus:outline-none lg:hidden"><svg
+                        class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg></button>
+                <div class="relative mx-4 lg:mx-0"><span class="absolute inset-y-0 left-0 flex items-center pl-3"><svg
+                            class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg></span><input
+                        class="w-32 pl-10 pr-4 text-indigo-600 border-gray-200 rounded-md sm:w-64 focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500"
+                        type="text" placeholder="Search"></div>
+            </div>
+            <div class="flex items-center"><button class="flex mx-4 text-gray-600 focus:outline-none"><svg
+                        class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg></button>
+                <div class="relative"><button
+                        class="relative z-10 block w-8 h-8 overflow-hidden rounded-full shadow focus:outline-none"><img
+                            class="object-cover w-full h-full"
+                            src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=296&amp;q=80"
+                            alt="Your avatar"></button>
+                    <div class="fixed inset-0 z-10 w-full h-full" style="display: none;"></div>
+                    <div class="absolute right-0 z-20 w-48 py-2 mt-2 bg-white rounded-md shadow-xl"
+                        style="display: none;"><a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Profile</a><a
+                            href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Products</a><a
+                            href="/"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Log
+                            out</a></div>
+                </div>
+            </div>
+        </header>
+        <div class="px-10">
+            <h3 class="text-3xl font-medium text-gray-700 mt-10">Dashboard</h3>
+            <div class="mt-4">
+                <div class="flex flex-wrap -mx-6 my-4">
+                    <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
+                        <div class="flex justify-center items-center px-5 py-6 bg-green-200 rounded-md shadow-lg hover:bg-green-500 ">
+                            <div class="p-3 bg-gray-300 bg-opacity-75 rounded-full"><img class="w-8 h-8" src="../images/doctor-icon.svg" alt="">
+                            </div>
+                            <div class="mx-5">
+                                <h4 class="text-2xl font-semibold text-gray-700 hover:text-gray-200">Doctors</h4>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
+                        <div class="flex justify-center items-center px-5 py-6 bg-green-200 rounded-md shadow-lg hover:bg-green-500">
+                            <div class="p-3 bg-blue-300 bg-opacity-75 rounded-full"><img class="w-8 h-8" src="../images/patient-icon.svg" alt=""></div>
+                            <div class="mx-5">
+                                <h4 class="text-2xl font-semibold text-gray-700 hover:text-gray-200">Patients</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
+                        <div class="flex justify-center items-center px-5 py-6 bg-green-200 rounded-md shadow-lg hover:bg-green-500">
+                            <div class="p-3 bg-pink-500 bg-opacity-75 rounded-full"><img class="w-8 h-8" src="../images/routine-icon.svg" alt="">
+                            </div>
+                            <div class="mx-5">
+                                <h4 class="text-2xl font-semibold text-gray-700 hover:text-gray-200">Appointment</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <div class="mt-8"></div>
+            <div class="flex flex-col mt-8">
+                <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                    <div
+                        class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
+                        <table class="min-w-full">
+                            <thead >
+                                <tr>
+                                    <th
+                                        class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                        Name </th>
+                                    <th
+                                        class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                        Title </th>
+                                    <th
+                                        class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                        Status </th>
+                                    <th
+                                        class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                        Role </th>
+                                    <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 w-10 h-10"><img class="w-10 h-10 rounded-full"
+                                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                    alt=""></div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium leading-5 text-gray-900">John Doe</div>
+                                                <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                        <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                        <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                    </td>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap"><span
+                                            class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm leading-5 text-gray-500 border-b border-gray-200 whitespace-nowrap">
+                                        Owner</td>
+                                    <td
+                                        class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 w-10 h-10"><img class="w-10 h-10 rounded-full"
+                                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                    alt=""></div>
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium leading-5 text-gray-900">John Doe</div>
+                                                <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap">
+                                        <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                        <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                    </td>
+                                    <td class="px-6 py-4 border-b border-gray-200 whitespace-nowrap"><span
+                                            class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 text-sm leading-5 text-gray-500 border-b border-gray-200 whitespace-nowrap">
+                                        Owner</td>
+                                    <td
+                                        class="px-6 py-4 text-sm font-medium leading-5 text-right border-b border-gray-200 whitespace-nowrap">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style></style>
