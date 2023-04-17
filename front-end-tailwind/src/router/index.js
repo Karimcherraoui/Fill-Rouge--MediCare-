@@ -54,8 +54,32 @@ const router = createRouter({
       }
     },
     {
-      path: '/dashboard_admin',
+      path: '/dashboardAdmin',
       name: 'dashboardAdmin',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/dashboardAdmin.vue'),
+      meta: {
+        showNavBar: false,
+        showFooterBar: false
+      }
+    },
+    {
+      path: '/dashboardPAtient',
+      name: 'dashboardPAtient',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/dashboardPatient.vue'),
+      meta: {
+        showNavBar: false,
+        showFooterBar: false
+      }
+    },
+    {
+      path: '/addUser',
+      name: 'addUser',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

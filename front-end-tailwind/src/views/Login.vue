@@ -1,5 +1,5 @@
 <template>
-  
+  <div class="flex flex-cols h-full" style="background-image: url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?w=996&t=st=1681657613~exp=1681658213~hmac=e6e482de963b45af7d0016c251ddd6c87ed9b20411cd8f2065c3b72603926b68')">
 
 <div class="flex w-full max-w-sm mx-auto mt-[8%] overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
     <div class="hidden bg-cover lg:block lg:w-1/2" style="background-image: url('https://imgs.search.brave.com/zRfW5NGip8sCsMkk8Iyc7ny9XGVDmKFn1M2rIh7fcjw/rs:fit:1200:980:1/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDAwLzQx/Ny84NDQvb3JpZ2lu/YWwvaGVhbHRoY2Fy/ZS1jbGluaWMtdmVj/dG9yLWZsYXQtaWxs/dXN0cmF0aW9uLmpw/Zw');"></div>
@@ -24,14 +24,13 @@
         </div>
 
         <div class="mt-4">
-            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="LoggingEmailAddress">Email Address</label>
+            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="LoggingEmailAddress">UserName</label>
             <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="email" />
         </div>
 
         <div class="mt-4">
             <div class="flex justify-between">
                 <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="loggingPassword">Password</label>
-                <a href="#" class="text-xs text-gray-500 dark:text-gray-300 hover:underline">Forget Password?</a>
             </div>
 
             <input id="loggingPassword" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="password" />
@@ -46,11 +45,11 @@
         <div class="flex items-center justify-between mt-4">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
 
-            <a href="#" class="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</a>
 
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
         </div>
     </div>
+</div>
 </div>
 </template>
 
