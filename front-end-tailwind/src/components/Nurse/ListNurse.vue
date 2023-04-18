@@ -2,6 +2,8 @@
     <div class="overflow-x-auto">
           <div class="min-w-screen  flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
               <div class="w-full lg:w-5/6">
+                <h1 class="text-2xl font-bold mb-8">List Nurse</h1>
+
                   <div class="bg-white shadow-md rounded my-6">
                       <table class="min-w-max w-full table-auto">
                           <thead>

@@ -4,7 +4,7 @@
         <aside
             class="flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
             <a href="#">
-                <img class="w-auto h-20" src="../images/medicare-2.png" alt="">
+                <img class="w-auto h-20" src="@/images/medicare-2.png" alt="">
             </a>
 
             <div class="flex flex-col justify-between flex-1 mt-6">
@@ -14,40 +14,42 @@
                         <a @click="toggleActiveComponent('AllUser')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/dashboard.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/dashboard.png" alt="">
 
                             <span class="mx-4 text-sm font-medium text-gray-200">Dashboard</span>
                         </a>
                         <a @click="toggleActiveComponent('ListDoctor')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/listDoctor.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/listDoctor.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Doctor</span>
                         </a>
-                        <a @click="toggleAddPatient"
-                            class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
-                            href="#">
-                            <img class="w-7 h-7 " src="../images/add-user.png" alt="">
-                            <span class="mx-4 text-sm font-medium text-white">Add Doctor</span>
-                        </a>
+                       
+
+
+
+
+                        
+
+                        
                         <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">Patient</label>
 
                         <a @click="toggleActiveComponent('ListPatient')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/listPatient.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/listPatient.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Patient</span>
                         </a>
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/patient.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/patient.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Patient</span>
                         </a>
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/medical-record.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/medical-record.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">History Medical</span>
                         </a>
 
@@ -57,7 +59,7 @@
                         <a @click="toggleActiveComponent('ListPatient')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/listappointment.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/listappointment.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Appointment</span>
                         </a>
 
@@ -65,7 +67,7 @@
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/appointment.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/appointment.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Appointment</span>
                         </a>
 
@@ -76,7 +78,7 @@
                         <a @click="toggleActiveComponent('ListPatient')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/hospital.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/hospital.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Room</span>
                         </a>
 
@@ -84,14 +86,14 @@
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/operating-room.png" alt="">
+                            <img class="w-7 h-7 " src="@/images/operating-room.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Room</span>
                         </a>
 
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="../images/hospital (1).png" alt="">
+                            <img class="w-7 h-7 " src="@/images/hospital (1).png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Bed</span>
                         </a>
 
@@ -134,7 +136,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
                             <div
                                 class="flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
-                                <div><img class="w-8 h-8" src="../images/doctor-icon.svg" alt="">
+                                <div><img class="w-8 h-8" src="@/images/doctor-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Doctors</div>
@@ -145,7 +147,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
-                                <div><img class="w-8 h-8" src="../images/nurse-female-icon.svg" alt="">
+                                <div><img class="w-8 h-8" src="@/images/nurse-female-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Nurses</div>
@@ -156,7 +158,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="../images/routine-icon.svg" alt=""></div>
+                                <div class=""><img class="w-8 h-8" src="@/images/routine-icon.svg" alt=""></div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
                                     <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
@@ -169,7 +171,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="../images/patient-icon.svg" alt="">
+                                <div class=""><img class="w-8 h-8" src="@/images/patient-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
@@ -180,7 +182,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="../images/room.svg" alt="">
+                                <div class=""><img class="w-8 h-8" src="@/images/room.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Rooms</div>
@@ -191,7 +193,7 @@
                         <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="../images/beds.svg" alt=""></div>
+                                <div class=""><img class="w-8 h-8" src="@/images/beds.svg" alt=""></div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Available Beds
                                     </div>
@@ -367,17 +369,23 @@ import ListPatient from '@/components/Patient/ListPatient.vue'
 import AddPatients from '@/components/Patient/Add_Patient.vue'
 import ListAppointment from '@/components/Appointment/ListAppointment.vue'
 import ListDoctor from '@/components/Doctor/ListDoctor.vue'
-import Dropdown from '../components/dropdown.vue'
+import AddDoctor from '@/components/Doctor/Add_doctor.vue'
+
+import Dropdown from '@/components/dropdown.vue'
 import AllUser from '@/components/Nurse/DashNurse.vue'
+import AddNurse from '@/components/Nurse/Add_nurse.vue'
+
 
 export default {
     components: {
         ListAppointment,
         Dropdown,
         ListDoctor,
+        AddDoctor,
         ListPatient,
         AddPatients,
         AllUser,
+        AddNurse,
     },
     data() {
         return {
@@ -418,11 +426,15 @@ export default {
         ListOfDoctor() {
             return this.activeComponent === 'ListDoctor'
         },
+
         ListOfPatient() {
             return this.activeComponent === 'ListPatient'
         },
         ListOfAppointment() {
             return this.activeComponent === 'ListAppointment'
+        },
+        AddNurse() {
+            return this.activeComponent === 'AddNurse'
         },
     },
 }

@@ -1,10 +1,10 @@
 <template>
-  <nav x-data="{ isOpen: false }" class="relative bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-800 shadow-lg">
+  <nav x-data="{ isOpen: false }" class="w-full bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-800 shadow-lg sticky top-0 z-50">
     <div class="container px-6 py-4 mx-auto">
         <div class="lg:flex lg:items-center lg:justify-between">
             <div class="flex items-center justify-between">
               <a class="text-3xl font-bold leading-none" href="#">
-                <img src="../images/medicare-2.png" class="h-16">
+                <img src="@/images/medicare-2.png" class="h-16">
         </a>
 
                 <!-- Mobile menu button -->
@@ -25,9 +25,9 @@
             <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 mt-4 transition-all duration-300 ease-in-out bg-white  dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
                 <div class=" flex flex-col -mx-6 lg:flex-row lg:pr-[380px] lg:items-center lg:mx-8 ">
                     <a href="#" class="px-3 py-2 mx-3 mt-2 lg:text-white  transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">Home</a>
-                    <a href="#" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">Doctors</a>
-                    <a href="#" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">About Us</a>
-                    <a href="#" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">Contact Us</a>
+                    <a href="#Doctors" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">Doctors</a>
+                    <a href="#Aboutus" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">About Us</a>
+                    <a href="#ContactUs" class="px-3 py-2 mx-3 mt-2 lg:text-white transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-700 dark:hover:bg-gray-700">Contact Us</a>
                 </div>
 
                 <div class="flex items-center mt-4 lg:mt-0">
@@ -42,11 +42,11 @@
                             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar">
                         </div>
                     </button> -->
-                    <button type="button" class="flex flex-cols gap-3 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <img class="w-7 h-7" src="../images/sign-in.png" alt="">
+                    <a href="/login" type="button" class="flex flex-cols gap-3 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <img class="w-7 h-7" src="@/images/sign-in.png" alt="">
                         <div>LOGIN </div>
 
-  </button>
+                    </a>
                 </div>
             </div>
         </div>

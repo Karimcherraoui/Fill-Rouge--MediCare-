@@ -11,10 +11,14 @@ class Doctor extends Model
 
     protected $fillable = [
         'name',
+        'email',
+        'password',
         'gender',
         'phone_number',
         'speciality',
-        'role',
+        'adress',
+        'statut',
+
     ];
 
     public function medicalRecords()

@@ -16,7 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('room_id');
             $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
             $table->string('bed_number');
-            $table->boolean('is_occupied')->default(false);
+            // $table->boolean('is_occupied')->default(false);
+            $table->enum('statut', ['occupé', 'dispo']);
             $table->timestamps();
         });
     }

@@ -11,9 +11,13 @@ class Nurse extends Model
 
     protected $fillable = [
         'name',
+        'email',
+        'password',
+        'adress',
         'gender',
         'phone_number',
-        'role'
+        'statut',
+
     ];
 
     /**

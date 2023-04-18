@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email');
+            $table->string('password');
             $table->enum('gender', ['male', 'female']);
             $table->string('phone_number');
             $table->string('speciality');
-            $table->string('role');
+            $table->string('adress');
+            $table->enum('statut', ['occupé', 'dispo']);
             $table->timestamps();
         });
     }
