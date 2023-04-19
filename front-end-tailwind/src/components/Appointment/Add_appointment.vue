@@ -1,94 +1,201 @@
 <template>
-    <section class="bg-white dark:bg-gray-900 w-3/4 rounded-lg shadow-lg mb-10 mx-auto">
-       
+    <!-- <headerComp></headerComp> -->
+    
+      <div class="mainpage bg-gray-200 w-4/6  mx-auto max-w-screen-xl p-4 py-12 rounded-xl sm:px-6 lg:px-8 my-20">
+        <div class="mx-auto max-w-lg   rounded-lg ">
+          <h1 class="text-center text-2xl font-bold text-green-700 sm:text-3xl">
+            To choose your date appointment
+          </h1>
   
-          <div class="flex items-center w-full max-w-3xl p-8 mx-auto tex">
-              <div class="w-full">
-                  <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
-                      Add a New Nurse now.
-                  </h1>
+         
+          <div class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
   
-                  <p class="mt-4 text-gray-500 dark:text-gray-400">
-                      Please fill out the form below to add a new patient to the system.
-                  </p>
-  
-                  
-  
-                  <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Name</label>
-                          <input type="text" placeholder="John" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email</label>
-                          <input type="email" placeholder="Exemple@exemple.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Password</label>
-                          <input type="Password" placeholder="Password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200"> Password</label>
-                          <input type="Password" placeholder="Confirmation Password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-  
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Gender</label>
-                          <input type="text" placeholder="Male" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-  
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Phone number</label>
-                          <input type="text" placeholder="XXX-XX-XXXX-XXX" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-  
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Date of birth</label>
-                          <input type="text" placeholder="Y-M-D" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-  
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Adress</label>
-                          <input type="text" placeholder="Adress" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                      </div>
-  
-                      
-                      
-                      <div>
-                          <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Statut</label>
-                          <input type="text" placeholder="Disponible" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        </div>  
-                        <div>
-                          
-                        </div>
-                      <button
-                          class="flex items-center justify-between w-full px-4 py-4 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-500 rounded-lg hover:bg-green-400 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50">
-                          <span>Register</span>
-  
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd"
-                                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                  clip-rule="evenodd" />
-                          </svg>
-                      </button>
-                  </form>
+            <div>
+              <label for="day" class="block mb-2 text-sm font-medium text-green-800 dark:text-white">Select Day</label>
+              <div class="relative mt-1">
+                <div>
+                  <input :min="today"
+                    class="bg-green-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    v-model="month" type="date">
+                </div>
+
+                
+
+                
               </div>
-          </div>
-  </section>
-  </template>
+            </div>
   
+            <div v-if="show">
+              <!-- {{ taken }} -->
+              <label for="heure" class="text-sm font-medium">heure</label>
+              <div  class="grid grid-cols-3 gap-2"> 
+              <div class="relative mt-1" v-for="h in heure " :key="h">
+  
+                <div v-if="taken.heure.includes(h)">
+                  <div v-if="taken.client[taken.heure.indexOf(h)] === local" v-on:click="now(h)"
+                    class="taken transform hover:scale-105 transition duration-300 shadow-xl rounded-lg p-4 bg-blue-200 taken-by-current-client">
+                    {{ h }}
+                  </div>
+                  <div v-else v-on:click="now(h)"
+                    class="taken transform hover:scale-105 transition duration-300 shadow-xl rounded-lg p-4 bg-red-200 taken-by-other-client">
+                    {{ h }}
+                  </div>
+                </div>
+                <div v-else v-on:click="now(h)"
+                  class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg  p-2 bg-gray-100">
+                  {{ h }}
+                </div>
+              </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  </template>
   <script>
+  import axios from 'axios'
   export default {
-      
-      methods: {
-      toggleAddPatient(componentName) {
-        console.log('testAdd');
-        this.$emit('button-clicked', componentName);
-      },
+    data() {
+      return {
+        today: '',
+        day: '',
+        local: localStorage.getItem('key'),
+        show: false,
+        heure: [],
+        taken: {
+          heure: [],
+          client: []
+        },
+        checked: true,
+        heureselected: '',
+        dataappointment: [],
+        id: '',
+        month: '',
+        week: '',
+        allow: true,
+      }
     },
+    created() {
+      const today = new Date().toISOString().split('T')[0];
+      this.today = today;
+    },
+    mounted() {
+      this.heure = ['9h - 10h', '10h - 11h', '11h - 12h', '14h - 15h', '15h - 16h', '16h - 17h', '17h - 18h', '18h - 19h', '19h - 20h']
+  
+    //   if (localStorage.getItem('reference') == null) {
+    //     this.$router.push('/login')
+    //   }
+      this.affichage()
+      // console.log(localStorage.getItem('reference'));
+  
+      axios.post('http://localhost/MonSalonOnline-backend/api/getClient'
+        , JSON.stringify({
+          'refernece': localStorage.getItem('reference'),
+  
+        }), {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+  
+  
+        // , [localStorage.getItem('key')])
+  
+        .then(response => {
+          // console.log(response);
+          this.id = response.data.id
+        })
+    },
+    methods: {
+  
+  
+  
+      affichage() {
+        this.taken.heure = []
+        this.taken.client = []
+        console.log(localStorage.getItem("id"));
+        axios.get('http://localhost/MonSalonOnline-backend/api/allRdv')
+          .then(response => {
+            //console.log(response.data.appointments);
+            this.dataappointment = response.data.appointments.filter((appointement) => appointement.date == this.month);
+            for (let i = 0; i < this.dataappointment.length; i++) {
+              console.log("=>", this.dataappointment[i].date, this.month)
+              if (this.dataappointment[i].id_client == localStorage.getItem("id")) {
+                this.allow = false;
+              }
+              if (this.dataappointment[i].jour == this.day || this.dataappointment[i].date == this.day) {
+                for (let j = 0; j < this.heure.length; j++) {
+                  if (this.dataappointment[i].heure == this.heure[j] && this.dataappointment[i].date == this.month) {
+                    this.taken.heure.push(this.heure[j])
+                    this.taken.client.push(this.dataappointment[i].reference)
+                  }
+                }
+              }
+            }
+            console.log(this.allow);
+          })
+      },
+  
+  
+  
+  
+      now(heureselected) {
+        console.log()
+        if (this.allow == false)
+          return;
+        this.allow = false;
+        if (this.taken.heure.includes(heureselected)) {
+          return
+        } else {
+          axios.post('http://localhost/MonSalonOnline-backend/api/addRdv'
+            , JSON.stringify({
+              'id_client': localStorage.getItem("id"),
+              'heure': heureselected,
+              'jour': this.day,
+              'date': this.month,
+              'statut': 'en cours'
+  
+            }), {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+            .then(response => {
+              console.log(response)
+              this.affichage()
+              this.heureselected = ''
+              alert('votre rendez-vous est bien pris Merci !!')
+  
+            })
+        }
+      },
+  
+  
+  
+    },
+  
+    watch: {
+      day: function () {
+        this.affichage()
+        this.show = true;
+        if (this.day == 'Monday' || this.day == 'Tuesday' || this.day == 'Wednesday' || this.day == 'Thursday' || this.day == 'Saturday') {
+          this.heure = ['08h00', '08h30', '09h00', '09h30', '10h00', '10h30', '11h00', '11h30', '12h00', '12h30', '13h00', '13h30', '14h00', '14h30', '15h00', '15h30', '16h00', '16h30', '17h00', '17h30', '18h00']
+        } 
+        else if (this.day == 'Friday' || this.day == 'Sunday') {
+          this.heure = []
+        } 
+        this.affichage()
+      },
+      month: function () {
+        this.allow = true;
+        this.affichage()
+        let input = new Date(this.month);
+        let dayName = input.toLocaleString("default", { weekday: "long" });
+        this.day = dayName
+        this.affichage()
+      }
+    }
   }
   </script>
-  
-  <style>
-  
-  </style>
+  <style></style>

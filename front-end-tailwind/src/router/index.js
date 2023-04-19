@@ -30,6 +30,18 @@ const router = createRouter({
       }
     },
     {
+      path: '/signup',
+      name: 'signup',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/signUp.vue'),
+      meta: {
+        showNavBar: false,
+        showFooterBar: false
+      }
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       // route level code-splitting
@@ -60,6 +72,18 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../components/Patient/dashboardPatient.vue'),
+      meta: {
+        showNavBar: false,
+        showFooterBar: false
+      }
+    },
+    {
+      path: '/appointment',
+      name: 'appointment',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../components/Appointment/Add_appointment.vue'),
       meta: {
         showNavBar: false,
         showFooterBar: false

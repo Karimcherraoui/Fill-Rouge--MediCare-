@@ -18,5 +18,6 @@ class Patient extends Model
         'phone',
         'address',
         'assurance',
+
     ];
 }

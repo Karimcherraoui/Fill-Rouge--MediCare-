@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('gender', ['male', 'female']);
             $table->string('phone_number');
             $table->enum('statut', ['occupé', 'dispo']);
+            $table->string('image');
 
             $table->timestamps();
         });

@@ -5,11 +5,10 @@
             style="background-image: url('https://imgs.search.brave.com/2Xd5rI64h28wH-bXxB-JBc88bvGGFV1n7EOj0Qsf5hE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9kZW1v/LmthbGl1bXRoZW1l/LmNvbS9tZWRpY2Fs/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE4/LzExL3RlYW0tb2Yt/ZG9jdG9ycy1pbi1o/b3N0cGl0YWwuanBn');">
             <div class="flex items-center justify-center w-full h-full bg-gray-900/40">
                 <div class="text-center">
-                    <h1 class="text-3xl font-semibold text-white lg:text-4xl">Build your new <span
-                            class="text-blue-400">Saas</span> Project</h1>
+                    <h1 class="text-3xl font-semibold text-white lg:text-4xl">Your Health is Our Priority <hr> Welcome to <span
+                            class="text-green-300">Medicare</span> Hospital </h1>
                     <button
-                        class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">Start
-                        project</button>
+                        class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md lg:w-auto hover:bg-green-500 focus:outline-none focus:bg-blue-500">Get Started</button>
                 </div>
             </div>
         </div>
@@ -35,16 +34,13 @@
                             <div class="mt-4 sm:mx-4 sm:mt-0">
                                 <h1
                                     class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">
-                                    arthur melo</h1>
+                                    Dr. Sarah Smith</h1>
 
-                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">design
-                                    director</p>
+                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300"> Pediatrician</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque
-                            facere numquam est.</p>
+                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Dr. Smith has been practicing pediatrics for over 10 years and is well-known for her compassionate and patient-centered approach to care. She specializes in the diagnosis and treatment of childhood illnesses, developmental delays, and behavioral issues.</p>
 
                         <div class="flex mt-4 -mx-2">
                             <a href="#"
@@ -92,16 +88,13 @@
                             <div class="mt-4 sm:mx-4 sm:mt-0">
                                 <h1
                                     class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">
-                                    Amelia. Anderson</h1>
+                                    Dr. Jane Lee</h1>
 
-                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead
-                                    Developer</p>
+                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Oncologist</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque
-                            facere numquam est.</p>
+                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Dr. Lee is a highly-respected oncologist who specializes in the treatment of breast cancer. She is known for her expertise in both medical and surgical oncology and has helped many patients achieve successful outcomes. Dr. Lee is committed to providing personalized care and support to her patients and their families throughout the entire cancer journey.</p>
 
                         <div class="flex mt-4 -mx-2">
                             <a href="#"
@@ -149,16 +142,13 @@
                             <div class="mt-4 sm:mx-4 sm:mt-0">
                                 <h1
                                     class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">
-                                    Olivia Wathan</h1>
+                                    Dr. Michael Brown </h1>
 
-                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lead
-                                    designer</p>
+                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Dermatologist</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque
-                            facere numquam est.</p>
+                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300"> Dr. Brown is a board-certified dermatologist with over 20 years of experience. He specializes in the diagnosis and treatment of skin conditions, such as acne, eczema, psoriasis, and skin cancer. Dr. Brown is also experienced in cosmetic dermatology procedures, including Botox, fillers, and laser treatments. He is dedicated to providing personalized care to his patients and helping them achieve healthy, glowing skin.</p>
 
                         <div class="flex mt-4 -mx-2">
                             <a href="#"
@@ -208,14 +198,11 @@
                                     class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">
                                     John Doe</h1>
 
-                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Full
-                                    stack developer</p>
+                                <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Cardiologist</p>
                             </div>
                         </div>
 
-                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Illum nesciunt officia aliquam neque optio? Cumque
-                            facere numquam est.</p>
+                        <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">Dr. Doe is a board-certified cardiologist with over 15 years of experience. He is a leader in the field of interventional cardiology and is skilled in performing complex procedures such as angioplasty and stenting. Dr. Doe is also dedicated to helping his patients make lifestyle changes that can improve heart health and prevent future cardiac events.</p>
 
                         <div class="flex mt-4 -mx-2">
                             <a href="#"

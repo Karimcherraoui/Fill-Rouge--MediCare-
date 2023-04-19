@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('speciality');
             $table->string('adress');
             $table->enum('statut', ['occupé', 'dispo']);
+            $table->string('image');
+
             $table->timestamps();
         });
     }

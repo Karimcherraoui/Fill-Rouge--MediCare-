@@ -18,6 +18,9 @@ class Doctor extends Model
         'speciality',
         'adress',
         'statut',
+        'image',
+
+
 
     ];
 

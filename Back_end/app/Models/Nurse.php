@@ -17,6 +17,8 @@ class Nurse extends Model
         'gender',
         'phone_number',
         'statut',
+        'image',
+
 
     ];
 

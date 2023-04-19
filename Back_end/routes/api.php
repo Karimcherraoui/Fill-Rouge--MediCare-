@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\patientsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,17 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/patient/store', [PatientController::class, 'store']);
+Route::middleware(['cors'])->group(function () {
+    Route::apiResource('patients', patientsController::class);
+});
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::Post('/patient/store', [PatientController::class, 'store']);
+
+
+

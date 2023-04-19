@@ -3,7 +3,7 @@
 
         <aside
             class="flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
-            <a href="#">
+            <a href="/">
                 <img class="w-auto h-20" src="@/images/medicare-2.png" alt="">
             </a>
 
@@ -40,7 +40,7 @@
                             <img class="w-7 h-7 " src="@/images/listPatient.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Patient</span>
                         </a>
-                        <a @click="toggleAddPatient"
+                        <a @click="toggleActiveComponent('AddPatients')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/patient.png" alt="">
@@ -56,7 +56,7 @@
 
                         <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">Appointment</label>
 
-                        <a @click="toggleActiveComponent('ListPatient')"
+                        <a @click="toggleActiveComponent('ListAppointment')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/listappointment.png" alt="">
@@ -64,7 +64,7 @@
                         </a>
 
 
-                        <a @click="toggleAddPatient"
+                        <a @click="toggleActiveComponent('AddAppointment')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/appointment.png" alt="">
@@ -355,7 +355,7 @@
                     </div>
                 </div>
             </div> -->
-                <AddPatients :class="AddPatients ? 'block' : 'hidden'" />
+                <!-- <AddPatients :class="AddPatients ? 'block' : 'hidden'" /> -->
                 <!-- <AllUser :class="AllUser ? 'block' : 'hidden'" /> -->
                 <component :is="activeComponent" />
 
@@ -370,7 +370,7 @@ import AddPatients from '@/components/Patient/Add_Patient.vue'
 import ListAppointment from '@/components/Appointment/ListAppointment.vue'
 import ListDoctor from '@/components/Doctor/ListDoctor.vue'
 import AddDoctor from '@/components/Doctor/Add_doctor.vue'
-
+import AddAppointment from '@/components/Appointment/Add_appointment.vue'
 import Dropdown from '@/components/dropdown.vue'
 import AllUser from '@/components/Nurse/DashNurse.vue'
 import AddNurse from '@/components/Nurse/Add_nurse.vue'
@@ -379,6 +379,7 @@ import AddNurse from '@/components/Nurse/Add_nurse.vue'
 export default {
     components: {
         ListAppointment,
+        AddAppointment,
         Dropdown,
         ListDoctor,
         AddDoctor,
@@ -390,34 +391,34 @@ export default {
     data() {
         return {
             AllUser: true,
-            AddPatients: false,
-            ListDoctor: false,
+            // AddPatients: false,
+            // ListDoctor: false,
             activeComponent: 'AllUser',
         }
     },
     methods: {
-        toggleDAshboard() {
-            this.AddPatients = false;
-            this.AllUser = true;
-        },
-        toggleListDoctor() {
-            this.AddPatients = false;
-            this.AllUser = false;
-            this.ListDoctor = true;
+        // toggleDAshboard() {
+        //     this.AddPatients = false;
+        //     this.AllUser = true;
+        // },
+        // toggleListDoctor() {
+        //     this.AddPatients = false;
+        //     this.AllUser = false;
+        //     this.ListDoctor = true;
 
-        },
-        toggleAddPatient() {
-            this.AllUser = false;
-            this.AddPatients = true;
-            this.activeComponent = '';
+        // },
+        // toggleAddPatient() {
+        //     this.AllUser = false;
+        //     this.AddPatients = true;
+        //     this.activeComponent = '';
 
 
-            //   this.activeComponent = componentName;
-        },
+        //     //   this.activeComponent = componentName;
+        // },
         toggleActiveComponent(componentName) {
             console.log('test')
             this.AllUser = false;
-            this.AddPatients = false;
+            // this.AddPatients = false;
 
             this.activeComponent = componentName;
         },
@@ -433,8 +434,16 @@ export default {
         ListOfAppointment() {
             return this.activeComponent === 'ListAppointment'
         },
+        AddAppointment() {
+            return this.activeComponent === 'AddAppointment'
+        },
+        AddPatient() {
+            return this.activeComponent === 'AddPatients'
+        },
         AddNurse() {
             return this.activeComponent === 'AddNurse'
+
+
         },
     },
 }

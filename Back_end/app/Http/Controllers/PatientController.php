@@ -20,19 +20,26 @@ class PatientController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'gender' => 'required|string|in:male,female',
-            'date_of_birth' => 'required|date',
-            'phone' => 'required|string',
-            'address' => 'required|string',
-        ]);
+{
+    
+    $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => ['required', 'string', 'email', 'max:255'],  
+        'password' => 'required',         
+        'gender' => 'required|string|in:male,female',
+        'date_of_birth' => 'required|date',
+        'phone' => 'required|string',
+        'address' => 'required|string',
+        'assurance' => 'string'
+    ]);
 
-        Patient::create($validatedData);
-
-        return redirect()->route('patients.index');
+    try {
+        $patient = Patient::create($validatedData);
+        return response()->json(['success' => true, 'message' => 'Patient created successfully', 'data' => $patient], 200);
+    } catch (\Exception $e) {
+        return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
     }
+}
 
     public function edit(Patient $patient)
     {

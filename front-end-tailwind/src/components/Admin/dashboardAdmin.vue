@@ -3,7 +3,7 @@
 
         <aside
             class="flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
-            <a href="#">
+            <a href="/">
                 <img class="w-auto h-20" src="@/images/medicare-2.png" alt="">
             </a>
 
@@ -157,8 +157,8 @@
                                 <div><img class="w-8 h-8" src="@/images/doctor-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Doctors</div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Doctors</div>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
                                 </div>
                             </div>
                         </div>
@@ -168,8 +168,8 @@
                                 <div><img class="w-8 h-8" src="@/images/nurse-female-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Nurses</div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Nurses</div>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
                                 </div>
                             </div>
                         </div>
@@ -178,8 +178,8 @@
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
                                 <div class=""><img class="w-8 h-8" src="@/images/routine-icon.svg" alt=""></div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
                                 </div>
                             </div>
                         </div>
@@ -192,8 +192,8 @@
                                 <div class=""><img class="w-8 h-8" src="@/images/patient-icon.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
                                 </div>
                             </div>
                         </div>
@@ -203,8 +203,8 @@
                                 <div class=""><img class="w-8 h-8" src="@/images/room.svg" alt="">
                                 </div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Rooms</div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Rooms</div>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
                                 </div>
                             </div>
                         </div>
@@ -213,9 +213,9 @@
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
                                 <div class=""><img class="w-8 h-8" src="@/images/beds.svg" alt=""></div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Available Beds
+                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Available Beds
                                     </div>
-                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
+                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
                                 </div>
                             </div>
                         </div>

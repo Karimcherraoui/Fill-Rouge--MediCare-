@@ -3,7 +3,7 @@
 
         <aside
             class="flex flex-col h-full w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
-            <a href="#">
+            <a href="/">
                 <img class="w-auto h-20" src="@/images/medicare-2.png" alt="">
             </a>
 
