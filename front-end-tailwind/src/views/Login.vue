@@ -18,21 +18,20 @@
         <p class="mt-3 text-xl text-center text-gray-600 dark:text-gray-200">
             Welcome back!
         </p>
-        <div class="mt-6">
+        <div class="mt-6 ">
 
-                    <div class="mt-3 md:flex md:items-center md:-mx-2">
-                        <button class="flex justify-center w-full px-6 py-3  text-green-500 border border-blue-500 hover:bg-green-500 hover:text-white  rounded-lg md:w-auto md:mx-2 focus:outline-none">
+                    <div class="mt-3 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 md:-mx-2">
+                        <a @click="toggleActiveComponent('LoginPatient')" class="flex justify-center w-full px-6 py-3  text-green-500 border border-blue-500 hover:bg-green-500 hover:text-white  rounded-lg md:w-auto md:mx-2 focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
 
-
                             <span class="">
                                 Patient
                             </span>
-                        </button>
+                        </a>
 
-                        <button class="flex justify-center w-full px-6 py-3 mt-4 text-green-500 border hover:bg-green-500 hover:text-white border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
+                        <a @click="toggleActiveComponent('LoginDoctor')" class="flex justify-center w-full px-6 py-3 mt-4 text-green-500 border hover:bg-green-500 hover:text-white border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
@@ -40,8 +39,8 @@
                             <span class="">
                                 Doctor
                             </span>
-                        </button>
-                        <button class="flex justify-center w-full px-6 py-3 mt-4  text-green-500 border hover:bg-green-500 hover:text-white  border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
+                        </a>
+                        <a @click="toggleActiveComponent('LoginNurse')" class="flex justify-center w-full px-6 py-3 mt-4  text-green-500 border hover:bg-green-500 hover:text-white  border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
@@ -49,7 +48,7 @@
                             <span class="">
                                 Nurse
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -61,24 +60,8 @@
             <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
         </div>
 
-        <div class="mt-4">
-            <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="LoggingEmailAddress">UserName</label>
-            <input id="LoggingEmailAddress" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="email" />
-        </div>
+        <component :is="activeComponent" />
 
-        <div class="mt-4">
-            <div class="flex justify-between">
-                <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="loggingPassword">Password</label>
-            </div>
-
-            <input id="loggingPassword" class="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300" type="password" />
-        </div>
-
-        <div class="mt-6">
-            <button class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
-                Sign In
-            </button>
-        </div>
 
         <div class="flex items-center justify-between mt-4">
             <span class="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
@@ -92,12 +75,47 @@
 </template>
 
 <script >
+import LoginPatient from '@/components/Patient/LoginPatient.vue'
+import LoginNurse from '@/components/Nurse/LoginNurse.vue'
+import LoginDoctor from '@/components/Doctor/LoginDoctor.vue'
+
 export default {
+    components: {
+        LoginPatient,
+        LoginNurse,
+        LoginDoctor
+    },
+    data() {
+        return {
+
+            activeComponent: 'LoginPatient',
+        }
+    },
     methods: {
     goBack() {
       this.$router.go(-1); // Navigate to the previous page
-    }
-  }
+    },
+
+     
+        toggleActiveComponent(componentName) {
+            console.log('test')
+            this.activeComponent = componentName;
+        },
+    },
+    
+    computed: {
+        PatientLogin() {
+            return this.activeComponent === 'LoginPatient'
+        },
+
+        NurseLogin() {
+            return this.activeComponent === 'LoginNurse'
+        },
+        DoctorLogin() {
+            return this.activeComponent === 'LoginDoctor'
+        },
+       
+    },
 }
 </script>
 

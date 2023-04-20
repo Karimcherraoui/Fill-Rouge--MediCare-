@@ -21,6 +21,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 });
 
 Route::post('/patient/store', [PatientController::class, 'store']);
+Route::post('/patient/login', [PatientController::class, 'login']);
+
 Route::middleware(['cors'])->group(function () {
     Route::apiResource('patients', patientsController::class);
 });

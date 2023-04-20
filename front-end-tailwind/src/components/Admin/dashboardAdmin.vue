@@ -111,7 +111,7 @@
                         <a @click="toggleAddPatient"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
-                            <img class="w-7 h-7 " src="@/images/hospital (1).png" alt="">
+                            <img class="w-7 h-7 " src="@/images/hospital1.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Bed</span>
                         </a>
 

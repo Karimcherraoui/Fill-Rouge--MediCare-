@@ -35,10 +35,22 @@ return [
     |
     */
 
+
     'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+    
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    
+        'patient' => [
+            'driver' => 'session',
+            'provider' => 'patients',
         ],
     ],
 
@@ -65,6 +77,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'patients' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Patient::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

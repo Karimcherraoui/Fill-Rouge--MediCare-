@@ -21,20 +21,23 @@ class Nurse extends Model
 
 
     ];
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 
-    /**
-     * Get the medical records for the nurse.
-     */
     public function medicalRecords()
     {
         return $this->hasMany(MedicalRecord::class);
     }
 
-    /**
-     * Get the appointments for the nurse.
-     */
-    public function appointments()
+    public function doctors()
     {
-        return $this->hasManyThrough(Appointment::class, MedicalRecord::class);
+        return $this->belongsToMany(Doctor::class, 'appointments');
+    }
+
+    public function nurses()
+    {
+        return $this->belongsToMany(Nurse::class, 'appointments');
     }
 }

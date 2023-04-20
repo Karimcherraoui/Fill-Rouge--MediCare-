@@ -19,9 +19,6 @@ class Doctor extends Model
         'adress',
         'statut',
         'image',
-
-
-
     ];
 
     public function medicalRecords()

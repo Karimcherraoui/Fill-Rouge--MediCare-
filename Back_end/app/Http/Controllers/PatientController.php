@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Patient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class PatientController extends Controller
 {
@@ -32,13 +34,31 @@ class PatientController extends Controller
         'address' => 'required|string',
         'assurance' => 'string'
     ]);
+    $hashedPassword = Hash::make($validatedData['password']);
+
 
     try {
         $patient = Patient::create($validatedData);
+        $patient->password = $hashedPassword;
+        $patient->save();
         return response()->json(['success' => true, 'message' => 'Patient created successfully', 'data' => $patient], 200);
     } catch (\Exception $e) {
         return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
     }
+}
+
+public function login(Request $request)
+{
+    $data = $request->only('email', 'password');
+
+    $patient = Patient::where('email', $data['email'])->first();
+
+    if ($patient && Hash::check($data["password"], $patient["password"])) {
+        // Authentication passed...
+        return Response()->json(["message"=>"logged in"]);
+    }
+    
+    return Response()->json(["message"=>"error"]);
 }
 
     public function edit(Patient $patient)
