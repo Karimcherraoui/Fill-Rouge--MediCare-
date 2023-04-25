@@ -49,8 +49,12 @@ return [
         ],
     
         'patient' => [
-            'driver' => 'session',
-            'provider' => 'patients',
+            'driver' => 'sanctum',
+            'provider' => 'patient',
+        ],
+        'Admin' => [
+            'driver' => 'eloquent',
+            'model' => 'admins',
         ],
     ],
 
@@ -77,9 +81,13 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        'patients' => [
+        'patient' => [
             'driver' => 'eloquent',
             'model' => App\Models\Patient::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

@@ -10,14 +10,14 @@ class Bed extends Model
     use HasFactory;
 
     protected $fillable = [
-        'room_id',
+        // 'room_id',
         'bed_number',
-        'is_occupied',
+        'statut',
     ];
 
-    public function room()
+    public function bed()
     {
-        return $this->belongsTo(Room::class);
+        return $this->belongsTo(bed::class);
     }
 
     public function medicalRecords()

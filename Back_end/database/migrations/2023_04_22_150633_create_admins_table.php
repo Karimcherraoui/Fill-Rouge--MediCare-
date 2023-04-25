@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('beds', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedBigInteger('room_id');
-            // $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
-            $table->string('bed_number');
-            // $table->boolean('is_occupied')->default(false);
-            $table->enum('statut', ['occupé', 'dispo']);
+            $table->string('name');
+            $table->string('email');
+            $table->string('password');
+         // $table->string('image');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('beds');
+        Schema::dropIfExists('admins');
     }
 };

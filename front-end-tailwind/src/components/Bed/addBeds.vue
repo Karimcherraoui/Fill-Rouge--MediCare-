@@ -1,35 +1,71 @@
 <template>
-    <div class="p-8 rounded border border-gray-200">
-        <h1 class="font-medium text-3xl">Add User</h1>
-        <p class="text-gray-600 mt-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos dolorem vel
-            cupiditate laudantium dicta.</p>
-        <form>
+    <div class="p-8 rounded border bg-white border-gray-200">
+        <h1 class="font-medium text-3xl">Add bed</h1>
+
+        <form @submit.prevent="addbed">
             <div class="mt-8 space-y-6">
-                <div> <label for="name" class="text-sm text-gray-700 block mb-1 font-medium">Name</label> <input type="text"
-                        name="name" id="name"
+                <div> <label for="name" class="text-sm text-gray-700 block mb-1 font-medium">bed Number</label> <input
+                      v-model="bed_number"  type="text" name="bed_number" id="bed_number"
                         class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                        placeholder="Enter your name" /> </div>
-                <div> <label for="email" class="text-sm text-gray-700 block mb-1 font-medium">Email Adress</label> <input
-                        type="text" name="email" id="email"
+                        placeholder="Enter bed Number" /> </div>
+               
+                <div> <label for="job" class="text-sm text-gray-700 block mb-1 font-medium">Statut</label> <input
+                    v-model="statut"   type="text" name="statut" id="statut"
                         class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                    placeholder="yourmail@provider.com" /> </div>
-            <div> <label for="job" class="text-sm text-gray-700 block mb-1 font-medium">Job title</label> <input
-                    type="text" name="job" id="job"
-                    class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
-                    placeholder="(ex. developer)" /> </div>
-        </div>
-        <div class="space-x-4 mt-8"> <button type="submit"
-                class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50">Save</button>
-            <!-- Secondary --> <button
-                class="py-2 px-4 bg-white border border-gray-200 text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50">Cancel</button>
-        </div>
-    </form>
-</div>
+                        placeholder="Dispo" /> </div>
+            </div>
+            <div class="space-x-4 mt-8"> <button type="submit"
+                    class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-700 disabled:opacity-50">Save</button>
+                <!-- Secondary -->
+            </div>
+        </form>
+    </div>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
+    data() {
+        return {
+            bed_number: '',
+            statut: '',
+            error: false
+        }
+    },
+    methods: {
 
+        addbed() {
+            if (this.bed_number === '' || this.statut === '') {
+                this.error = true
+            } else {
+                axios.post('http://127.0.0.1:8000/api/bed/store', JSON.stringify({
+                    'bed_number': this.bed_number,
+                    'statut': this.statut,
+
+                }), {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => {
+
+
+                        if (response.data.message === 'bed created') {
+                            this.$router.go(-1); // Navigate to the previous page
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    })
+            }
+        }
+
+    },
+    //   computed: {
+    //     signupForm() {
+    //       return !(this.nom === '' || this.prenom === '' || this.phone === '' || this.email === '')
+    //     }
+    //   }
 }
 </script>
 

@@ -89,9 +89,9 @@
       this.affichage()
       // console.log(localStorage.getItem('reference'));
   
-      axios.post('http://localhost/MonSalonOnline-backend/api/getClient'
+      axios.post('http://127.0.0.1:8000/api/patient/getClient'
         , JSON.stringify({
-          'refernece': localStorage.getItem('reference'),
+          'email': localStorage.getItem('email'),
   
         }), {
         headers: {
@@ -103,8 +103,8 @@
         // , [localStorage.getItem('key')])
   
         .then(response => {
-          // console.log(response);
-          this.id = response.data.id
+          console.log(response.data.patientId);
+          this.id = response.data.patientId
         })
     },
     methods: {
@@ -114,7 +114,7 @@
       affichage() {
         this.taken.heure = []
         this.taken.client = []
-        console.log(localStorage.getItem("id"));
+        console.log(localStorage.getItem("email"));
         axios.get('http://localhost/MonSalonOnline-backend/api/allRdv')
           .then(response => {
             //console.log(response.data.appointments);
@@ -179,10 +179,10 @@
       day: function () {
         this.affichage()
         this.show = true;
-        if (this.day == 'Monday' || this.day == 'Tuesday' || this.day == 'Wednesday' || this.day == 'Thursday' || this.day == 'Saturday') {
+        if (this.day == 'Monday' || this.day == 'Tuesday' || this.day == 'Wednesday' || this.day == 'Thursday' || this.day == 'Friday') {
           this.heure = ['08h00', '08h30', '09h00', '09h30', '10h00', '10h30', '11h00', '11h30', '12h00', '12h30', '13h00', '13h30', '14h00', '14h30', '15h00', '15h30', '16h00', '16h30', '17h00', '17h30', '18h00']
         } 
-        else if (this.day == 'Friday' || this.day == 'Sunday') {
+        else if (this.day == 'Saturday' || this.day == 'Sunday') {
           this.heure = []
         } 
         this.affichage()

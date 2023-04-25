@@ -4,21 +4,24 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
+
 
 class Doctor extends Model
 {
-    use HasFactory;
+    use HasFactory , HasApiTokens;
 
     protected $fillable = [
         'name',
         'email',
         'password',
         'gender',
-        'phone_number',
+        'phone',
+        'date_of_birth',
+
         'speciality',
-        'adress',
+        'address',
         'statut',
-        'image',
     ];
 
     public function medicalRecords()

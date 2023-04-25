@@ -2,14 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User;
 use Laravel\Sanctum\HasApiTokens;
+// use Illuminate\Foundation\Auth\User;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 
-class Patient extends User
+
+class Patients extends User
 {
-    use HasFactory, HasApiTokens;
+    use HasFactory, Notifiable, HasApiTokens;
 
     protected $fillable = [
         'name',
@@ -22,6 +25,16 @@ class Patient extends User
         'assurance',
 
     ];
+
+    public static function getPatientByEmail($email)
+{
+    return self::where('email', $email)->first();
+}   
+public static function getPatientById($id)
+{
+    return self::where('id', $id)->first();
+}
+
     public function appointments()
     {
         return $this->hasMany(Appointment::class);

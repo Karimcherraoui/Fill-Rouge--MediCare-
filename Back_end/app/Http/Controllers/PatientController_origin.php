@@ -6,15 +6,12 @@ use App\Models\Patients;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use App\Models\User;
 
-
-class PatientController extends Controller
+class PatientController_origin extends Controller
 {
     public function index()
     {
-         $patients = patients::all();
+         $patients = Patients::all();
     $count = $patients->count();
 
     return response()->json([
@@ -33,36 +30,28 @@ class PatientController extends Controller
 
     public function store(Request $request)
 {
-
+    
     $validatedData = $request->validate([
         'name' => 'required|string|max:255',
-        'email' => 'required | string | email | max:255 | unique:patients',  
+        'email' => 'required | string | email | max:255 | unique:Patients',  
         'password' => 'required|string|min:6|confirmed',
-        'password_confirmation' => 'required|string|min:6',
         'gender' => 'required|string|in:male,female',
         'date_of_birth' => 'required|date',
         'phone' => 'required|string',
         'address' => 'required|string',
         'assurance' => 'string'
     ]);
-    // dd($validatedData);
-
-
-
     $hashedPassword = Hash::make($validatedData['password']);
 
 
     try {
-        $patient = patients::create($validatedData);
+        $patient = Patients::create($validatedData);
         $patient->password = $hashedPassword;
         $patient->save();
         return response()->json(['success' => true, 'message' => 'Patient created successfully', 'data' => $patient], 200);
     } catch (\Exception $e) {
         return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
     }
-
-
-
 }
 
 
@@ -72,7 +61,7 @@ public function getPatient()
     
     if ($data !== null && property_exists($data, "email")) {
         // $patient = $this->patientModel->getPatientByEmail($data->email);
-        $patient = patients::getPatientByEmail($data->email);
+        $patient = Patients::getPatientByEmail($data->email);
 
         if ($patient !== null) {
             return response()->json([
@@ -88,7 +77,7 @@ public function getPatient()
     ]);
 }
 public function getPatientById($id){
-    $data = patients::getPatientById($id);
+    $data = Patients::getPatientById($id);
     // dd($data->phone);
     if ($data !== null ) {
             return response()->json($data);
@@ -102,25 +91,17 @@ public function getPatientById($id){
 
 public function login(Request $request)
 {
-//   dd($request->password);
+    $data = $request->only('email', 'password');
 
-    $email = $request->email;
-    $password = $request->password;
+        if (Auth::attempt($data)) {
+            $user = Auth::Patient();
+            return response()->json([
+                'user' => $user,
+            ]);
+        }
+    
 
-    $patient = patients::where('email', $email)->first();
-
-    if (!$patient) {
-        return response()->json(['error' => 'Invalid email'], 401);
-    }
-
-    if (!Hash::check($password, $patient->password)) {
-        return response()->json(['error' => 'Invalid password'], 401);
-    }
-
-    // At this point, the user has been authenticated
-    // You can generate a token or perform other actions here
-
-    return response()->json(['patient' => $patient]);
+        return response()->json(['error' => 'Unauthorised'], 401);
     }
 
 
@@ -149,7 +130,7 @@ public function login(Request $request)
     }
 
     public function destroy($id) {
-        $patient = patients::findOrFail($id);
+        $patient = Patients::findOrFail($id);
         $patient->delete();
     
         return response()->json(['message' => 'Patient deleted successfully.']);

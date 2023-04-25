@@ -13,14 +13,21 @@ class Nurse extends Model
         'name',
         'email',
         'password',
-        'adress',
+        'address',
+        'date_of_birth',
         'gender',
-        'phone_number',
+        'phone',
         'statut',
-        'image',
 
 
     ];
+
+    public static function getNurseByEmail($email)
+{
+    return self::where('email', $email)->first();
+}   
+
+
     public function appointments()
     {
         return $this->hasMany(Appointment::class);

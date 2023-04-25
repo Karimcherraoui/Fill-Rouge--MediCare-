@@ -36,13 +36,20 @@ class BedController extends Controller
      */
     public function store(Request $request)
     {
-        $bed = new Bed;
-        $bed->room_id = $request->input('room_id');
-        $bed->bed_number = $request->input('bed_number');
-        $bed->is_occupied = $request->input('is_occupied', false);
-        $bed->save();
-        return redirect()->route('beds.index');
+        $validatedData = $request->validate([
+            'bed_number' => 'required|unique:beds',
+            'statut' => 'required|in:dispo,occupied',
+        ]);
+
+        try {
+            $bed = Bed::create($validatedData);
+            $bed->save();
+            return response()->json(['success' => true, 'message' => 'bed created successfully', 'data' => $bed], 200);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
+        }
     }
+
 
     /**
      * Display the specified resource.
@@ -75,7 +82,7 @@ class BedController extends Controller
      */
     public function update(Request $request, Bed $bed)
     {
-        $bed->room_id = $request->input('room_id');
+        $bed->bed_id = $request->input('bed_id');
         $bed->bed_number = $request->input('bed_number');
         $bed->is_occupied = $request->input('is_occupied', false);
         $bed->save();

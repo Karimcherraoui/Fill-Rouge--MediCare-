@@ -2,7 +2,7 @@
   <section class="grid md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 xl:grid-flow-col gap-6 mb-10">
                 <div class="row-span-3 bg-white shadow-lg rounded-lg">
                     <div class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
-                        <span>List of Doctors</span>
+                        <span>List of Doctors </span>
                         <button type="button"
                             class="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600"
                             id="options-menu" aria-haspopup="true" aria-expanded="true">
@@ -17,71 +17,15 @@
                         <!-- Refer here for full dropdown menu code: https://tailwindui.com/components/application-ui/elements/dropdowns -->
                     </div>
                     <div class="overflow-y-auto" style="max-height: 24rem;">
-                        <ul class="p-6 space-y-6">
+                        <ul class="p-6 space-y-6" v-for="doctor in doctors" :key="doctor.id">
                             <li class="flex items-center">
                                 <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
                                     <img src="https://randomuser.me/api/portraits/women/82.jpg"
                                         alt="Annette Watson profile picture">
                                 </div>
-                                <span class="text-gray-600">Annette Watson</span>
-                                <span class="ml-auto font-semibold">9.3</span>
+                                <span class="text-gray-600">{{ doctor.name }}</span>
                             </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
-                                        alt="Calvin Steward profile picture">
-                                </div>
-                                <span class="text-gray-600">Calvin Steward</span>
-                                <span class="ml-auto font-semibold">8.9</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/80.jpg"
-                                        alt="Ralph Richards profile picture">
-                                </div>
-                                <span class="text-gray-600">Ralph Richards</span>
-                                <span class="ml-auto font-semibold">8.7</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/79.jpg"
-                                        alt="Bernard Murphy profile picture">
-                                </div>
-                                <span class="text-gray-600">Bernard Murphy</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/78.jpg"
-                                        alt="Arlene Robertson profile picture">
-                                </div>
-                                <span class="text-gray-600">Arlene Robertson</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/77.jpg"
-                                        alt="Jane Lane profile picture">
-                                </div>
-                                <span class="text-gray-600">Jane Lane</span>
-                                <span class="ml-auto font-semibold">8.1</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/76.jpg"
-                                        alt="Pat Mckinney profile picture">
-                                </div>
-                                <span class="text-gray-600">Pat Mckinney</span>
-                                <span class="ml-auto font-semibold">7.9</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                                        alt="Norman Walters profile picture">
-                                </div>
-                                <span class="text-gray-600">Norman Walters</span>
-                                <span class="ml-auto font-semibold">7.7</span>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -106,71 +50,15 @@
                         <!-- Refer here for full dropdown menu code: https://tailwindui.com/components/application-ui/elements/dropdowns -->
                     </div>
                     <div class="overflow-y-auto" style="max-height: 24rem;">
-                        <ul class="p-6 space-y-6">
+                        <ul class="p-6 space-y-6" v-for="patient in patients" :key="patient.id">
                             <li class="flex items-center">
                                 <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
                                     <img src="https://randomuser.me/api/portraits/women/82.jpg"
                                         alt="Annette Watson profile picture">
                                 </div>
-                                <span class="text-gray-600">Annette Watson</span>
-                                <span class="ml-auto font-semibold">9.3</span>
+                                <span class="text-gray-600">{{ patient.name }}</span>
                             </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
-                                        alt="Calvin Steward profile picture">
-                                </div>
-                                <span class="text-gray-600">Calvin Steward</span>
-                                <span class="ml-auto font-semibold">8.9</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/80.jpg"
-                                        alt="Ralph Richards profile picture">
-                                </div>
-                                <span class="text-gray-600">Ralph Richards</span>
-                                <span class="ml-auto font-semibold">8.7</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/79.jpg"
-                                        alt="Bernard Murphy profile picture">
-                                </div>
-                                <span class="text-gray-600">Bernard Murphy</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/78.jpg"
-                                        alt="Arlene Robertson profile picture">
-                                </div>
-                                <span class="text-gray-600">Arlene Robertson</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/77.jpg"
-                                        alt="Jane Lane profile picture">
-                                </div>
-                                <span class="text-gray-600">Jane Lane</span>
-                                <span class="ml-auto font-semibold">8.1</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/76.jpg"
-                                        alt="Pat Mckinney profile picture">
-                                </div>
-                                <span class="text-gray-600">Pat Mckinney</span>
-                                <span class="ml-auto font-semibold">7.9</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                                        alt="Norman Walters profile picture">
-                                </div>
-                                <span class="text-gray-600">Norman Walters</span>
-                                <span class="ml-auto font-semibold">7.7</span>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -196,84 +84,62 @@
                         <!-- Refer here for full dropdown menu code: https://tailwindui.com/components/application-ui/elements/dropdowns -->
                     </div>
                     <div class="overflow-y-auto" style="max-height: 24rem;">
-                        <ul class="p-6 space-y-6">
+                        <ul class="p-6 space-y-6" v-for="doctor in doctors" :key="doctor.id">
                             <li class="flex items-center">
                                 <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
                                     <img src="https://randomuser.me/api/portraits/women/82.jpg"
                                         alt="Annette Watson profile picture">
                                 </div>
-                                <span class="text-gray-600">Annette Watson</span>
-                                <span class="ml-auto font-semibold">9.3</span>
+                                <span class="text-gray-600">{{ doctor.name }}</span>
                             </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/81.jpg"
-                                        alt="Calvin Steward profile picture">
-                                </div>
-                                <span class="text-gray-600">Calvin Steward</span>
-                                <span class="ml-auto font-semibold">8.9</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/80.jpg"
-                                        alt="Ralph Richards profile picture">
-                                </div>
-                                <span class="text-gray-600">Ralph Richards</span>
-                                <span class="ml-auto font-semibold">8.7</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/79.jpg"
-                                        alt="Bernard Murphy profile picture">
-                                </div>
-                                <span class="text-gray-600">Bernard Murphy</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/78.jpg"
-                                        alt="Arlene Robertson profile picture">
-                                </div>
-                                <span class="text-gray-600">Arlene Robertson</span>
-                                <span class="ml-auto font-semibold">8.2</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/77.jpg"
-                                        alt="Jane Lane profile picture">
-                                </div>
-                                <span class="text-gray-600">Jane Lane</span>
-                                <span class="ml-auto font-semibold">8.1</span>
-                            </li>
-                            <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/76.jpg"
-                                        alt="Pat Mckinney profile picture">
-                                </div>
-                                <span class="text-gray-600">Pat Mckinney</span>
-                                <span class="ml-auto font-semibold">7.9</span>
-                            </li>
-                            <li class="flex items-center">
-                            <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                                    alt="Norman Walters profile picture">
-                            </div>
-                            <span class="text-gray-600">Norman Walters</span>
-                            <span class="ml-auto font-semibold">7.7</span>
-                        </li>
-                    </ul>
-                </div>
+                           
+                        </ul>
+                    </div>
             </div>
            
         </section>
 </template>
 
 <script>
-export default {
+  import axios from 'axios';
 
-}
+  export default {
+      data() {
+          return {
+              patients: [],
+              doctors: []
+          }
+      },
+      mounted() {
+          this.getPatients();
+          this.getDoctor();
+
+
+      },
+      methods: {
+          getPatients() {
+              axios.get('http://127.0.0.1:8000/api/patient/getAllPatient')
+                  .then(response => {
+                    console.log(response.data.patients)
+                      this.patients = response.data.patients;
+                  })
+                  .catch(error => {
+                      console.log(error);
+                  });
+          },
+          getDoctor() {
+            axios.get('http://127.0.0.1:8000/api/doctor/getAllDoctor')
+                .then(response => {
+                    console.log(response.data.doctor)
+                    this.doctors = response.data.doctor;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+      }
+  }
 </script>
-
 <style>
 
 </style>

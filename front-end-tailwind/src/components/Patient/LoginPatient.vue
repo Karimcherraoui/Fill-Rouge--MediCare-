@@ -1,5 +1,14 @@
 <template>
+
+
+
     <form @submit.prevent="login">
+
+
+
+      <div v-if="error" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+{{ errorMessage }}</div>
+    
 
     <div class="mt-4">
             <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200" for="email">Email</label>
@@ -22,6 +31,7 @@
     </form>
 
 
+
 </template>
 
 <script >
@@ -32,12 +42,15 @@ export default {
    return{
     email: '',
     password: '',
+    error: false,
+    errorMessage: '',
+
     } 
   
   },
   mounted(){
       if(localStorage.getItem('email') !== null){
-        this.$router.push('/dashboardPAtient')
+        this.$router.push('/dashboardPatient')
       }
   },
 
@@ -45,30 +58,37 @@ export default {
     goBack() {
       this.$router.go(-1); // Navigate to the previous page
     },
-    login() {
-      axios.post('http://127.0.0.1:8000/api/patient/login', JSON.stringify({
+      login() {
+
+    if (this.email === '' || this.password === '' ) {
+      this.error = true;
+      this.errorMessage = 'Please fill in all fields';
+    } else {
+      axios.post('http://127.0.0.1:8000/api/patient/login', {
         'email': this.email, 
         'password': this.password, 
+      })
+      
+      .then(response => {
+        console.log('login response:', response);
+        if (response.status === 200) {
+          // Redirect to dashboard or other page after successful login
+          this.$router.push('/dashboardPatient')
 
-      }), {
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
-        .then(response => {
-          console.log(response);
-          if (response.status) {
-            localStorage.setItem('email', this.email)
-            localStorage.setItem('id', response.data.status[0].id)
-            this.$router.push('/dashboardPAtient')
-          } else {
-            alert('Invalid UserName')
-          }
+        } 
+      }) 
+      .catch(error => {
+        console.log(error)
+        this.errorMessage = 'The email Or password is not correct';
+
+            this.error = true
+          
         })
     }
-
+  }
   }
 }
+    
 </script>
 
 <style>

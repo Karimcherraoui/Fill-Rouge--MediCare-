@@ -1,424 +1,187 @@
 <template>
     <div class="overflow-x-auto">
-          <div class="min-w-screen  flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
-              <div class="w-full lg:w-5/6">
+        <div class="min-w-screen  flex items-center justify-center font-sans overflow-hidden">
+            <div class="w-full lg:w-5/6">
+
                 <h1 class="text-2xl font-bold mb-8">List Nurse</h1>
 
-                  <div class="bg-white shadow-md rounded my-6">
-                      <table class="min-w-max w-full table-auto">
-                          <thead>
-                              <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                  <th class="py-3 px-6 text-left">Nurse Name</th>
-                                  <th class="py-3 px-6 text-left">Client</th>
-                                  <th class="py-3 px-6 text-center">Users</th>
-                                  <th class="py-3 px-6 text-center">Status</th>
-                                  <th class="py-3 px-6 text-center">Actions</th>
-                              </tr>
-                          </thead>
-                          <tbody class="text-gray-600 text-sm font-light">
-                              <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left whitespace-nowrap">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                                   width="24" height="24"
-                                                   viewBox="0 0 48 48"
-                                                   style=" fill:#000000;">
-                                                  <path fill="#80deea" d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z"></path><path fill="#80deea" d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z"></path><path fill="#80deea" d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z"></path><circle cx="24" cy="24" r="4" fill="#80deea"></circle>
-                                              </svg>
-                                          </div>
-                                          <span class="font-medium">React Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          </div>
-                                          <span>Eshal Rosas</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">Active</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/100/000000/vue-js.png"/>
-                                          </div>
-                                          <span class="font-medium">Vue Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          </div>
-                                          <span>Anita Rodriquez</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/100/000000/angularjs.png"/>
-                                          </div>
-                                          <span class="font-medium">Angular Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                          </div>
-                                          <span>Taylan Bush</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Scheduled</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/laravel-64.png"/>
-                                          </div>
-                                          <span class="font-medium">Laravel Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/4.jpg"/>
-                                          </div>
-                                          <span>Tarik Novak</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Pending</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/48/000000/git.png" />
-                                          </div>
-                                          <span class="font-medium">GIT Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/5.jpg"/>
-                                          </div>
-                                          <span>Oscar Howard</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">Active</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/48/000000/nodejs.png" />
-                                          </div>
-                                          <span class="font-medium">NodeJS Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/women/6.jpg"/>
-                                          </div>
-                                          <span>Melisa Moon</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">Scheduled</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/48/000000/javascript.png"/>
-                                          </div>
-                                          <span class="font-medium">JavaScript Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/women/7.jpg"/>
-                                          </div>
-                                          <span>Cora Key</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">Pending</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr class="border-b border-gray-200 bg-gray-50 hover:bg-gray-100">
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6" src="https://img.icons8.com/color/48/000000/php.png"/>
-                                          </div>
-                                          <span class="font-medium">PHP Project</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-left">
-                                      <div class="flex items-center">
-                                          <div class="mr-2">
-                                              <img class="w-6 h-6 rounded-full" src="https://randomuser.me/api/portraits/men/8.jpg"/>
-                                          </div>
-                                          <span>Kylan Dorsey</span>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex items-center justify-center">
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125" src="https://randomuser.me/api/portraits/men/1.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/women/2.jpg"/>
-                                          <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125" src="https://randomuser.me/api/portraits/men/3.jpg"/>
-                                      </div>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Completed</span>
-                                  </td>
-                                  <td class="py-3 px-6 text-center">
-                                      <div class="flex item-center justify-center">
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                                              </svg>
-                                          </div>
-                                          <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                                              </svg>
-                                          </div>
-                                      </div>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </template>
+                <div class="bg-white shadow-md rounded my-6 overflow-x-auto ">
+                    <table class="min-w-max w-full table-auto">
+                        <thead>
+                            <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                <th class="py-3 px-6 text-left">#</th>
+                                <th class="py-3 px-6 text-left">Action</th>
+                                <th class="py-3 px-6 text-left">Nurse</th>
+                                <th class="py-3 px-6 text-center">Email</th>
+                                <th class="py-3 px-6 text-center">Gender</th>
+                                <th class="py-3 px-6 text-center">Date of birthday</th>
+                                <th class="py-3 px-6 text-center">Phone</th>
+                                <th class="py-3 px-6 text-center">Address</th>
+                                <th class="py-3 px-6 text-center">statut</th>
+                              
+
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 text-sm font-light">
+
+                            <tr class="border-b border-gray-200 hover:bg-gray-100" v-for="nurse in nurses" :key="nurse.id">
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.id }}</span>
+                                    </div>
+                                </td>
+                                
+                                
+                                <td class="py-3 px-6 text-left">
+                                    <div class="flex items-center gap-2">
+                                        <svg @click="deletePatient(nurse.id)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+</svg>
+
+<svg @click="TogglePopup('buttonTrigger')" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+</svg>
+
+
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.name }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.email }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.gender }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.date_of_birth }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.phone }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.address }}</span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        
+                                        <span class="font-medium">{{ nurse.statut }}</span>
+                                    </div>
+                                </td>
+                                
+                               
+                            </tr>
+                           
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <popup  :myProp="isModalVisible" @closeModal="closeModal"/> -->
+<editPatient v-if="buttonTrigger" :TogglePopup="TogglePopup" buttonName="buttonTrigger" />
+
+</template>
   
   <script>
+  import axios from 'axios';
+
+
+  import editPatient from '@/components/Patient/editPatient.vue'
+
   export default {
+
+components: {
+    editPatient
+},
+
+      data() {
+
+          return {
+            nurses: [],
+            buttonTrigger :false,
+          }
+      },
+      mounted() {
+          this.getNurse();
+            
+      },
+     
+
+      methods: {
+        TogglePopup(buttonName) {
+            console.log(this[buttonName])
+      this[buttonName] = !this[buttonName];
+        },
+
+          getPatients() {
+              axios.get('http://127.0.0.1:8000/api/patient/getAllPatient')
+                  .then(response => {
+                    console.log(response.data.patients)
+                      this.patients = response.data.patients;
+                  })
+                  .catch(error => {
+                      console.log(error);
+                  });
+          },
+          getNurse() {
+            axios.get('http://127.0.0.1:8000/api/nurse/getAllNurse')
+                .then(response => {
+                    console.log(response)
+                    this.nurses = response.data.nurse;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        },
+          deletePatient(id){
+            axios.delete('http://127.0.0.1:8000/api/patient/delete/' + id)
+            .then(response => {
+                console.log(response.data.message);
+                // update patient list
+                axios.get('http://127.0.0.1:8000/api/patient/getAllPatient')
+                  .then(response => {
+                    console.log(response.data.patients)
+                      this.patients = response.data.patients;
+                  })
+                  .catch(error => {
+                      console.log(error);
+                  });
+            })
+            .catch(error => {
+                console.log(error.response.data);
+            });
+    },
   
-  }
-  </script>
+          },
+         
+    }
+      
   
-  <style>
+</script>
   
-  </style>
+<style></style>

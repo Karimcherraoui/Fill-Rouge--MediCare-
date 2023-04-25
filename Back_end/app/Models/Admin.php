@@ -46,18 +46,16 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Laravel\Sanctum\HasApiTokens;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable implements MustVerifyEmail
-{
-    use HasFactory, Notifiable , HasApiTokens;
+class Admin extends Authenticatable {
+    use HasFactory, Notifiable;
 
     protected $fillable = [
         'email',
+  
         'password',
     ];
 
@@ -84,17 +82,5 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(AvailableAppointment::class);
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);
-    }
-
-    public function hasRole($role)
-    {
-        if (is_string($role)) {
-            return $this->roles->contains('UserName', $role);
-        }
-
-        return !! $role->intersect($this->roles)->count();
-    }
+   
 }

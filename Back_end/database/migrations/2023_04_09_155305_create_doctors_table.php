@@ -17,11 +17,12 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->enum('gender', ['male', 'female']);
-            $table->string('phone_number');
+            $table->string('phone');
+            $table->date('date_of_birth');
             $table->string('speciality');
-            $table->string('adress');
+            $table->string('address');
             $table->enum('statut', ['occupé', 'dispo']);
-            $table->string('image');
+            // $table->string('image');
 
             $table->timestamps();
         });

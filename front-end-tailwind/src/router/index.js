@@ -16,6 +16,7 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Home.vue')
+      
     },
     {
       path: '/login',
@@ -48,6 +49,18 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../components/Nurse/dashboard.vue'),
+      meta: {
+        showNavBar: false,
+        showFooterBar: false
+      }
+    },
+    {
+      path: '/dashboard_doctor',
+      name: 'dashboard_doctor',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../components/Doctor/dashboard_doctor.vue'),
       meta: {
         showNavBar: false,
         showFooterBar: false

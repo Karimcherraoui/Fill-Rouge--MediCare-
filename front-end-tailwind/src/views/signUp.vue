@@ -15,6 +15,9 @@
                         Register A new account.
                     </h1>
 
+                    <div v-if="error" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                        {{ errorMessage }}</div>
+                        
 
                     <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2" @submit.prevent="signup">
                         <div>
@@ -34,7 +37,7 @@
                         </div>
                         <div>
                             <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200"> Confirm Password</label>
-                            <input type="Password" placeholder="Confirmation Password"
+                            <input type="Password" placeholder="Confirmation Password" v-model="password_confirmation"
                                 class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
 
@@ -97,12 +100,16 @@ export default {
             name: '',
             email: '',
             password: '',
+            password_confirmation: '',
             gender: '',
             date_of_birth: '',
             phone: '',
             address: '',
             assurance: '',
-            error: false
+            error: false,
+            errorMessage: ''
+
+
         }
     },
     methods: {
@@ -111,18 +118,20 @@ export default {
         },
 
         signup() {
-            if (this.name === '' || this.email === '' || this.password === '' || this.gender === '' || this.date_of_birth === '' || this.phone === '') {
+            if (this.name === '' || this.email === '' || this.password === '' || this.password_confirmation === '' || this.gender === '' || this.date_of_birth === '' || this.phone === '') {
                 this.error = true
             } else {
                 axios.post('http://127.0.0.1:8000/api/patient/store', JSON.stringify({
                     'name': this.name,
-            'email': this.email,
-            'password': this.password,
-            'gender': this.gender,
-            'date_of_birth': this.date_of_birth,
-            'phone': this.phone,
-            'address': this.address,
-            'assurance': this.assurance,
+                    'email': this.email,
+                    'password': this.password,
+                    'password_confirmation': this.password_confirmation,
+
+                    'gender': this.gender,
+                    'date_of_birth': this.date_of_birth,
+                    'phone': this.phone,
+                    'address': this.address,
+                    'assurance': this.assurance,
                 }), {
                     headers: {
                         'Content-Type': 'application/json'
@@ -131,23 +140,28 @@ export default {
                     .then(response => {
 
 
-                        if (response.data.message === 'client created') {
+                        if (response.data.message === 'Patient created successfully') {
                             this.$router.push('/login')
                         }
                     })
                     .catch(error => {
-                        console.log(error)
-                    })
-                }
-            }
+                        console.log(error.response.data.message)
 
-        },
-        //   computed: {
-        //     signupForm() {
-        //       return !(this.nom === '' || this.prenom === '' || this.phone === '' || this.email === '')
-        //     }
-        //   }
-    }
+
+                        this.errorMessage = error.response.data.message
+                        this.error = true
+
+                    })
+            }
+        }
+
+    },
+    //   computed: {
+    //     signupForm() {
+    //       return !(this.nom === '' || this.prenom === '' || this.phone === '' || this.email === '')
+    //     }
+    //   }
+}
 </script>
 
 <style></style>

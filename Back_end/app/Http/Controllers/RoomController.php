@@ -39,11 +39,17 @@ class RoomController extends Controller
     {
         $validatedData = $request->validate([
             'room_number' => 'required|unique:rooms',
+            'type' => 'required | string',
+            'statut' => 'required|in:dispo,occupied',
         ]);
 
-        $room = Room::create($validatedData);
-
-        return redirect()->route('rooms.index')->with('success', 'Room created successfully.');
+        try {
+            $room = Room::create($validatedData);
+            $room->save();
+            return response()->json(['success' => true, 'message' => 'room created successfully', 'data' => $room], 200);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
+        }
     }
 
     /**
