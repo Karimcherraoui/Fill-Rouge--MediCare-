@@ -145,7 +145,7 @@ export default {
                         console.log(response)
 
                         if (response.data.message === 'nurse created successfully') {
-                            this.$router.push('/dashboardAdmin')
+                            this.$router.go(0)
                         }
                     })
                     .catch(error => {

@@ -20,7 +20,7 @@
         </p>
         <div class="mt-6 ">
 
-                    <div class="mt-3 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 md:-mx-2">
+                    <div class="mt-3 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 md:-mx-2">
                         <a @click="toggleActiveComponent('LoginPatient')" class="flex justify-center w-full px-6 py-3  text-green-500 border border-blue-500 hover:bg-green-500 hover:text-white  rounded-lg md:w-auto md:mx-2 focus:outline-none">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -47,6 +47,16 @@
 
                             <span class="">
                                 Nurse
+                            </span>
+                        </a>
+
+                        <a @click="toggleActiveComponent('LoginAdmin')" class="flex justify-center w-full px-6 py-3 mt-4  text-green-500 border hover:bg-green-500 hover:text-white  border-blue-500 rounded-lg md:mt-0 md:w-auto md:mx-2 dark:border-blue-400 dark:text-blue-400 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+
+                            <span class="">
+                                Admin
                             </span>
                         </a>
                     </div>
@@ -78,12 +88,15 @@
 import LoginPatient from '@/components/Patient/LoginPatient.vue'
 import LoginNurse from '@/components/Nurse/LoginNurse.vue'
 import LoginDoctor from '@/components/Doctor/LoginDoctor.vue'
+import LoginAdmin from '@/components/Admin/LoginAdmin.vue'
+
 
 export default {
     components: {
         LoginPatient,
         LoginNurse,
-        LoginDoctor
+        LoginDoctor,
+        LoginAdmin
     },
     data() {
         return {
@@ -98,7 +111,7 @@ export default {
 
      
         toggleActiveComponent(componentName) {
-            console.log('test')
+            console.log('admin')
             this.activeComponent = componentName;
         },
     },
@@ -114,6 +127,10 @@ export default {
         DoctorLogin() {
             return this.activeComponent === 'LoginDoctor'
         },
+        AdminLogin() {
+            return this.activeComponent === 'LoginAdmin'
+        },
+       
        
     },
 }

@@ -207,8 +207,7 @@ export default {
                 doctor: null,
             },
             AllUser: true,
-            // AddPatients: false,
-            // ListDoctor: false,
+
             activeComponent: 'AllUser',
         }
     },
@@ -293,12 +292,7 @@ export default {
         AddPatient() {
             return this.activeComponent === 'AddPatients'
         },
-        RoomAdd() {
-            return this.activeComponent === 'AddRoom'
-        },
-        BedAdd() {
-            return this.activeComponent === 'AddBed'
-        },
+
         AddNurse() {
             return this.activeComponent === 'AddNurse'
 

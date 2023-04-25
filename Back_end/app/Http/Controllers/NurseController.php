@@ -163,11 +163,10 @@ public function getNurse(){
      * @param  \App\Models\Nurse  $nurse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nurse $nurse)
-    {
-        $nurse->delete();
-
-        return redirect()->route('nurses.index')
-            ->with('success', 'Nurse deleted successfully.');
+    public function destroy($id) {
+        $patient = Nurse::findOrFail($id);
+        $patient->delete();
+    
+        return response()->json(['message' => 'Nurse deleted successfully.']);
     }
 }

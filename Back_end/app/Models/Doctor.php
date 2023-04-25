@@ -24,11 +24,19 @@ class Doctor extends Model
         'statut',
     ];
 
+    public static function getDoctorBySpeciality($speciality)
+    {
+        return self::where('speciality', $speciality)->get();
+    }   
+
     public function medicalRecords()
     {
         return $this->hasMany(MedicalRecord::class);
     }
-
+    // public function speciality()
+    // {
+    //     return $this->belongsTo(Speciality::class);
+    // }
     public function appointments()
     {
         return $this->hasManyThrough(Appointment::class, MedicalRecord::class);

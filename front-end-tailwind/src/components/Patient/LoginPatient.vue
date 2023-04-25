@@ -72,6 +72,10 @@ export default {
       .then(response => {
         console.log('login response:', response);
         if (response.status === 200) {
+            localStorage.setItem('id', response.data.patient.id)
+            localStorage.setItem('email', response.data.patient.email)
+            localStorage.setItem('userType', 'is patient')
+
           // Redirect to dashboard or other page after successful login
           this.$router.push('/dashboardPatient')
 

@@ -16,9 +16,9 @@ class AdminController extends Controller
     
         if ($admin && Hash::check($data["password"], $admin["password"])) {
             // Authentication passed...
-            return Response()->json(["message"=>"logged in"]);
+            return Response()->json(["admin"=>$admin]);
         }
         
-        return Response()->json(["message"=>"error"]);
+        return Response()->json(["admin"=>"error"]);
     }
 }

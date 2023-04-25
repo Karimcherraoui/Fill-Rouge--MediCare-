@@ -53,6 +53,25 @@ class DoctorController extends Controller
     }
 
 
+    public function getDoctorByspeciality()
+{
+    $data = json_decode(request()->getContent());
+    
+    if ($data !== null && property_exists($data, "speciality")) {
+        // $patient = $this->patientModel->getPatientByEmail($data->email);
+        $doctor = Doctor::getDoctorBySpeciality($data->speciality);
+
+        if ($doctor !== null) {
+            return response()->json($doctor);
+        }
+    }
+    
+    return response()->json([
+        "patient" => false,
+    ]);
+}
+
+
     public function login(Request $request)
     {
         $email = $request->email;

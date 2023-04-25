@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AppointementController;
 use App\Http\Controllers\BedController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\NurseController;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\patientsController;
 use App\Http\Controllers\RoomController;
+use App\Models\Appointement;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +44,12 @@ Route::put('/patient/edit/{id}', [PatientController::class, 'update']);
 Route::post('/Nurse/store', [NurseController::class, 'store']);
 Route::post('/nurse/login', [NurseController::class, 'login']);
 Route::get('/nurse/getAllNurse', [NurseController::class, 'index']);
+Route::delete('/nurse/delete/{id}', [NurseController::class, 'destroy']);
 
+
+
+Route::post('/appointment/store', [AppointementController::class, 'store']);
+Route::post('/appointment/allRdv', [AppointementController::class, 'allRdv']);
 
 
 
@@ -51,40 +58,16 @@ Route::get('/nurse/getAllNurse', [NurseController::class, 'index']);
 Route::post('/doctor/store', [DoctorController::class, 'store']);
 Route::post('/doctor/login', [DoctorController::class, 'login']);
 Route::get('/doctor/getAllDoctor', [DoctorController::class, 'index']);
+Route::post('/doctor/getDoctorBySpeciality', [DoctorController::class, 'getDoctorByspeciality']);
+
 Route::delete('/doctor/delete/{id}', [DoctorController::class, 'destroy']);
 
 
 
 
 
-
-Route::post('/room/store', [RoomController::class, 'store']);
-
-
-
-
-Route::post('/bed/store', [BedController::class, 'store']);
-
-
-
-
 Route::post('/admin/login', [AdminController::class, 'login']);
 
-
-
-route::middleware('auth:sanctum')->get('/user', function(request $request){
-    return $request->user();
-});
-// Route::middleware(['cors'])->group(function () {
-//     Route::apiResource('patients', patientsController::class);
-// });
-
-
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-// Route::Post('/patient/store', [PatientController::class, 'store']);
-
+Route::post("/allRdv", [AppointementController::class, "allRdv"]);
 
 

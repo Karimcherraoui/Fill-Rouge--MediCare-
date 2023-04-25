@@ -1,10 +1,8 @@
 <template>
   <div class="px-10">
-             
-                <div class="mt-4">
-                    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-4 my-4">
-                        <div class="w-full px-6 mt-6  xl:mt-0">
-                            <div
+    <div class="mt-3 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-4 md:-mx-2 gap-4">
+                       
+        <div
                                 class="flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
                                 <div><img class="w-8 h-8" src="@/images/doctor-icon.svg" alt="">
                                 </div>
@@ -13,8 +11,8 @@
                                     <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">{{ count.doctor }}</h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="w-full px-6 mt-6    sm:mt-0">
+
+
                             <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
                                 <div><img class="w-8 h-8" src="@/images/nurse-female-icon.svg" alt="">
@@ -24,19 +22,37 @@
                                     <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">{{ count.nurse }}</h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="w-full px-6 mt-6  xl:mt-0">
+
+
                             <div
+                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
+                                <div><img class="w-8 h-8" src="@/images/routine-icon.svg" alt="">
+                                </div>
+                                <div class="mx-5 flex flex-cols justify-between w-full">
+                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
+                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">2</h4>
+                                </div>
+                            </div>
+
+
+                            <!-- <div
                                 class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
                                 <div class=""><img class="w-8 h-8" src="@/images/routine-icon.svg" alt=""></div>
                                 <div class="mx-5 flex flex-cols justify-between w-full">
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
                                     <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">2</h4>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:mt-0">
+                            </div> -->
                             <div
+                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
+                                <div class=""><img class="w-8 h-8" src="@/images/patient-icon.svg" alt=""></div>
+                                <div class="mx-5 flex flex-cols justify-between w-full">
+                                    <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
+                                    <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">{{ count.patient }}</h4>
+                                </div>
+                            </div>
+
+                            <!-- <div
                                 class=" flex justify-center items-center px-4 py-2 mt-4 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
                                 <div class=""><img class="w-8 h-8" src="@/images/patient-icon.svg" alt="">
                                 </div>
@@ -44,14 +60,11 @@
                                     <div class="text-xl font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
                                     <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-400">{{ count.patient }}</h4>
                                 </div>
-                            </div>
-                        </div>
-                        
+                            </div> -->
+
                     </div>
-                    
-                        
-                    
-                </div>
+             
+                
 
                 
                     

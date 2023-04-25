@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointement;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
 class AppointementController extends Controller
@@ -41,13 +42,24 @@ class AppointementController extends Controller
             'patient_id' => 'required|exists:patients,id',
             'doctor_id' => 'required|exists:doctors,id',
             'date' => 'required|date',
+            'heure' => 'required' ,
+            'jour'=> 'required' ,
+            'mois'=> 'required' ,
+            'statut'=> '',
             'reason' => 'required|string',
+            
         ]);
 
-        $Appointement = Appointement::create($validatedData);
+            try {
+                $Appointement = Appointement::create($validatedData);
+           
+                return response()->json(['success' => true, 'message' => 'Appointement created successfully', 'data' => $Appointement], 200);
+            } catch (\Exception $e) {
+                return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
+            }
 
-        return redirect()->route('Appointements.index')
-            ->with('success', 'Appointement created successfully.');
+
+
     }
 
     /**
@@ -106,5 +118,13 @@ class AppointementController extends Controller
 
         return redirect()->route('Appointements.index')
             ->with('success', 'Appointement deleted successfully.');
+    }
+
+    public function allRdv(Request $req){
+        return Response()->json([
+            "appointments" => Appointement::WhereDate('date',$req->date)
+            ->where("doctor_id", $req->doc_id)
+            ->get()
+    ], 200);
     }
 }

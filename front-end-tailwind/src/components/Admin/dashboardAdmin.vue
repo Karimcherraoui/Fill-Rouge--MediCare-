@@ -82,7 +82,7 @@
                         </a>
 
 
-                        <a @click="toggleAddPatient"
+                        <a @click="toggleActiveComponent('AddAppointment')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/appointment.png" alt="">
@@ -113,79 +113,8 @@
                         @click="toggleActiveComponent('AllUser')">Dashboard</button>
                 </h3>
 
-                <div class="mt-4">
-                    <div class="flex flex-wrap -mx-6 my-4">
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                            <div
-                                class="flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
-                                <div><img class="w-8 h-8" src="@/images/doctor-icon.svg" alt="">
-                                </div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Doctors</div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
-                            <div
-                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full  ">
-                                <div><img class="w-8 h-8" src="@/images/nurse-female-icon.svg" alt="">
-                                </div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Nurses</div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                            <div
-                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="@/images/routine-icon.svg" alt=""></div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Appointments</div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
-                                </div>
-                            </div>
-                        </div>
+                <statisticSection />
 
-                    </div>
-                    <div class="flex flex-wrap -mx-6">
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
-                            <div
-                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="@/images/patient-icon.svg" alt="">
-                                </div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Patients</div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">{{ count }}</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
-                            <div
-                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="@/images/room.svg" alt="">
-                                </div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Nb Rooms</div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">200,521</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                            <div
-                                class=" flex justify-center items-center px-4 py-2 bg-gradient-to-r from-rose-100 to-teal-100  rounded-md shadow-lg hover:bg-green-500 w-full   ">
-                                <div class=""><img class="w-8 h-8" src="@/images/beds.svg" alt=""></div>
-                                <div class="mx-5 flex flex-cols justify-between w-full">
-                                    <div class="text-sm font-semibold text-gray-700 hover:text-gray-400">Available Beds
-                                    </div>
-                                    <h4 class="text-sm font-semibold text-gray-700 hover:text-gray-400">215,542</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
 
 
                 <div class="mt-4">
@@ -264,10 +193,14 @@
 <script>
   import axios from 'axios';
 
+  import statisticSection from '@/components/Statistic.vue'
+
 import ListPatient from '@/components/Patient/ListPatient.vue'
 import AddPatients from '@/components/Patient/Add_Patient.vue'
 import editPatient from '@/components/Patient/editPatient.vue'
 import ListAppointment from '@/components/Appointment/ListAppointment.vue'
+import AddAppointment from '@/components/Appointment/Add_appointment.vue'
+
 import ListDoctor from '@/components/Doctor/ListDoctor.vue'
 import AddDoctor from '@/components/Doctor/Add_doctor.vue'
 import Dropdown from '@/components/dropdown.vue'
@@ -280,6 +213,7 @@ import ListNurse from '@/components/Nurse/ListNurse.vue'
 export default {
     components: {
         ListAppointment,
+        statisticSection,
         Dropdown,
         ListDoctor,
         AddDoctor,
@@ -288,7 +222,8 @@ export default {
         editPatient,
         AllUser,
         AddNurse,
-        ListNurse
+        ListNurse,
+        AddAppointment
     },
     data() {
         return {
@@ -322,7 +257,7 @@ export default {
         toggleActiveComponent(componentName) {
             console.log('test')
             this.AllUser = false;
-            this.AddPatients = false;
+
 
             this.activeComponent = componentName;
         },
@@ -353,6 +288,9 @@ export default {
         },
         ListOfAppointment() {
             return this.activeComponent === 'ListAppointment'
+        },
+        AddAppointment() {
+            return this.activeComponent === 'AddAppointment'
         },
         AddNurse() {
             return this.activeComponent === 'AddNurse'

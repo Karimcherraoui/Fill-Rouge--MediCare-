@@ -67,13 +67,17 @@ if (this.email === '' || this.password === '' ) {
   })
   
   .then(response => {
-    console.log('login response:', response);
-    if (response.status === 200) {
-      // Redirect to dashboard or other page after successful login
-      this.$router.push('/dashboard')
+        console.log('login response:', response);
+        if (response.status === 200) {
+          localStorage.setItem('id', response.data.nurse.id)
+            localStorage.setItem('email', response.data.nurse.email)
+            localStorage.setItem('userType', 'is nurse')
 
-    } 
-  }) 
+          // Redirect to dashboard or other page after successful login
+          this.$router.push('/dashboard_doctor')
+
+        } 
+      }) 
   .catch(error => {
     console.log(error)
     this.errorMessage = 'The email Or password is not correct';
