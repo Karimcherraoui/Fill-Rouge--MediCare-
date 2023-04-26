@@ -133,7 +133,7 @@ export default {
 
 
                         if (response.data.message === 'Patient created successfully') {
-                            this.$router.push('/login')
+                            this.$router.go(0)
                         }
                     })
                     .catch(error => {
@@ -148,11 +148,7 @@ export default {
         }
 
     },
-    //   computed: {
-    //     signupForm() {
-    //       return !(this.nom === '' || this.prenom === '' || this.phone === '' || this.email === '')
-    //     }
-    //   }
+
 }
 </script>
 

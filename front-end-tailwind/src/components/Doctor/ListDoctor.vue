@@ -101,17 +101,7 @@
                                         <span class="font-medium">{{ doctor.statut }}</span>
                                     </div>
                                 </td>
-                                
-                                <!-- <td class="py-3 px-6 text-center">
-                                    <div class="flex items-center justify-center">
-                                        <img class="w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125"
-                                            src="https://randomuser.me/api/portraits/men/1.jpg" />
-                                        <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                                            src="https://randomuser.me/api/portraits/women/2.jpg" />
-                                        <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                                            src="https://randomuser.me/api/portraits/men/3.jpg" />
-                                    </div>
-                                </td> -->
+
                                
                             </tr>
                            
@@ -122,7 +112,6 @@
         </div>
     </div>
 </div>
-<!-- <popup  :myProp="isModalVisible" @closeModal="closeModal"/> -->
 <editPatient v-if="buttonTrigger" :TogglePopup="TogglePopup" buttonName="buttonTrigger" />
 
 </template>

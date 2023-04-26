@@ -17,7 +17,12 @@ class AppointementController extends Controller
     {
         $Appointements = Appointement::all();
 
-        return view('Appointements.index', compact('Appointements'));
+        $count = $Appointements->count();
+    
+        return response()->json([
+            'appointment' => $Appointements,
+            'count' => $count
+        ]);
     }
 
     /**
@@ -42,24 +47,21 @@ class AppointementController extends Controller
             'patient_id' => 'required|exists:patients,id',
             'doctor_id' => 'required|exists:doctors,id',
             'date' => 'required|date',
-            'heure' => 'required' ,
-            'jour'=> 'required' ,
-            'mois'=> 'required' ,
-            'statut'=> '',
+            // 'heure' => 'required' ,
+            // 'jour'=> 'required' ,
+            // 'mois'=> 'required' ,
+            //'statut' => '',
             'reason' => 'required|string',
-            
+
         ]);
 
-            try {
-                $Appointement = Appointement::create($validatedData);
-           
-                return response()->json(['success' => true, 'message' => 'Appointement created successfully', 'data' => $Appointement], 200);
-            } catch (\Exception $e) {
-                return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
-            }
+        try {
+            $Appointement = Appointement::create($validatedData);
 
-
-
+            return response()->json(['success' => true, 'message' => 'Appointement created successfully', 'data' => $Appointement], 200);
+        } catch (\Exception $e) {
+            return response()->json(['success' => false, 'message' => $e->getMessage()], 500);
+        }
     }
 
     /**
@@ -120,11 +122,12 @@ class AppointementController extends Controller
             ->with('success', 'Appointement deleted successfully.');
     }
 
-    public function allRdv(Request $req){
+    public function allRdv(Request $req)
+    {
         return Response()->json([
-            "appointments" => Appointement::WhereDate('date',$req->date)
-            ->where("doctor_id", $req->doc_id)
-            ->get()
-    ], 200);
+            "appointments" => Appointement::WhereDate('date', $req->date)
+                ->where("doctor_id", $req->doc_id)
+                ->get()
+        ], 200);
     }
 }

@@ -28,23 +28,6 @@ class Nurse extends Model
 }   
 
 
-    public function appointments()
-    {
-        return $this->hasMany(Appointment::class);
-    }
 
-    public function medicalRecords()
-    {
-        return $this->hasMany(MedicalRecord::class);
-    }
-
-    public function doctors()
-    {
-        return $this->belongsToMany(Doctor::class, 'appointments');
-    }
-
-    public function nurses()
-    {
-        return $this->belongsToMany(Nurse::class, 'appointments');
-    }
+   
 }

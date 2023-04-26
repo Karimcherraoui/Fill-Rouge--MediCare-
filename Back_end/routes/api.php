@@ -24,50 +24,46 @@ use App\Models\Appointement;
 */
 
 
-Route::post('/patient/store', [PatientController::class, 'store']);
+// Prefix for Patient routes
+Route::prefix('/patient')->group(function () {
+    Route::post('/store', [PatientController::class, 'store']);
+    Route::post('/login', [PatientController::class, 'login']);
+    Route::post('/getClient', [PatientController::class, 'getPatient']);
+    Route::post('/getClientById/{id}', [PatientController::class, 'getPatientById']);
+    Route::get('/getAllPatient', [PatientController::class, 'index']);
+    Route::delete('/delete/{id}', [PatientController::class, 'destroy']);
+    Route::put('/edit/{id}', [PatientController::class, 'update']);
+});
 
-// Route::middleware('auth:sanctum')->post('/patient/store', [PatientController::class, 'store']);
+// Prefix for Nurse routes
+Route::prefix('/nurse')->group(function () {
+    Route::post('/store', [NurseController::class, 'store']);
+    Route::post('/login', [NurseController::class, 'login']);
+    Route::get('/getAllNurse', [NurseController::class, 'index']);
+    Route::delete('/delete/{id}', [NurseController::class, 'destroy']);
+});
 
-Route::post('/patient/login', [PatientController::class, 'login']);
-Route::post('/patient/getClient', [PatientController::class, 'getPatient']);
-Route::post('/patient/getClientById/{id}', [PatientController::class, 'getPatientById']);
-Route::get('/patient/getAllPatient', [PatientController::class, 'index']);
-Route::delete('/patient/delete/{id}', [PatientController::class, 'destroy']);
-Route::put('/patient/edit/{id}', [PatientController::class, 'update']);
+// Prefix for Appointment routes
+Route::prefix('/appointment')->group(function () {
+    Route::post('/store', [AppointementController::class, 'store']);
+    Route::post('/allRdv', [AppointementController::class, 'allRdv']);
+    Route::get('/getAllAppointment', [AppointementController::class, 'index']);
 
+});
 
+// Prefix for Doctor routes
+Route::prefix('/doctor')->group(function () {
+    Route::post('/store', [DoctorController::class, 'store']);
+    Route::post('/login', [DoctorController::class, 'login']);
+    Route::get('/getAllDoctor', [DoctorController::class, 'index']);
+    Route::post('/getDoctorBySpeciality', [DoctorController::class, 'getDoctorByspeciality']);
+    Route::delete('/delete/{id}', [DoctorController::class, 'destroy']);
+});
 
+// Prefix for Admin routes
+Route::prefix('/admin')->group(function () {
+    Route::post('/login', [AdminController::class, 'login']);
+});
 
-
-
-
-Route::post('/Nurse/store', [NurseController::class, 'store']);
-Route::post('/nurse/login', [NurseController::class, 'login']);
-Route::get('/nurse/getAllNurse', [NurseController::class, 'index']);
-Route::delete('/nurse/delete/{id}', [NurseController::class, 'destroy']);
-
-
-
-Route::post('/appointment/store', [AppointementController::class, 'store']);
-Route::post('/appointment/allRdv', [AppointementController::class, 'allRdv']);
-
-
-
-
-
-Route::post('/doctor/store', [DoctorController::class, 'store']);
-Route::post('/doctor/login', [DoctorController::class, 'login']);
-Route::get('/doctor/getAllDoctor', [DoctorController::class, 'index']);
-Route::post('/doctor/getDoctorBySpeciality', [DoctorController::class, 'getDoctorByspeciality']);
-
-Route::delete('/doctor/delete/{id}', [DoctorController::class, 'destroy']);
-
-
-
-
-
-Route::post('/admin/login', [AdminController::class, 'login']);
-
+// Route outside the prefixes
 Route::post("/allRdv", [AppointementController::class, "allRdv"]);
-
-

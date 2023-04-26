@@ -35,7 +35,7 @@
 
                         <label class="px-3 text-xs text-green-200 uppercase dark:text-gray-400">Appointment</label>
 
-                        <a @click="toggleActiveComponent('ListPatient')"
+                        <a @click="toggleActiveComponent('ListAppointment')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/listappointment.png" alt="">
@@ -93,7 +93,7 @@
                             <div class="mx-5 flex flex-cols justify-between w-full">
                                 <h4 class="text-xl font-semibold text-gray-700 hover:text-gray-500">Appointment
                                 </h4>
-                                <div class="text-xl font-semibold text-gray-700 hover:text-gray-500">8 / 20</div>
+                                <div class="text-xl font-semibold text-gray-700 hover:text-gray-500">{{ countApp }}</div>
 
                             </div>
                         </button>
@@ -115,15 +115,14 @@
 </template>
 
 <script>
-// import ListPatient from '@/components/Patient/ListPatient.vue'
-// import AddPatients from '@/components/Patient/Add_Patient.vue'
+
 import ListAppointment from '@/components/Appointment/ListAppointment.vue'
 import AddAppointment from '@/components/Appointment/Add_appointment.vue'
 import ListDoctor from '@/components/Doctor/ListDoctor.vue'
 import Dropdown from '@/components/dropdown.vue'
 import historyMedical from '@/components/Patient/historyMedical.vue'
-// import AllUser from '@/components/Nurse/DashNurse.vue'
 
+import axios from 'axios'
 export default {
     components: {
         ListAppointment,
@@ -132,40 +131,39 @@ export default {
         ListDoctor,
         Dropdown,
         historyMedical
-        // ListPatient,
-        // AddPatients,
-        // AllUser,
+  
     },
     data() {
         return {
-            // AllUser: true,
-            // AddPatients: false,
+            countApp: '',
             activeComponent: 'ListAppointment',
         }
     },
+    mounted(){
+        this.getAppoitments();
+    },
+
     methods: {
-        // toggleDAshboard() {
-        //     this.AddPatients = false;
-        //     this.AllUser = true;
-        // },
-        // toggleAddPatient() {
-        //     this.AllUser = false;
-        //     this.AllUser = false;
-        //     this.AddPatients = true;
-        //     this.activeComponent = '';
+        getAppoitments(){
+            axios.get('http://127.0.0.1:8000/api/appointment/getAllAppointment')
+          .then(response => {
+            console.log(response.data.count)
+            this.countApp = response.data.count;
 
-
-        //       this.activeComponent = componentName;
-        // },
+          })
+          .catch(error => {
+            console.log(error);
+          });
+        },
         toggleActiveComponent(componentName) {
             console.log('test')
-            // this.AllUser = false;
-            // this.AddPatients = false;
+
 
             this.activeComponent = componentName;
         },
     },
     computed: {
+
         ListOfDoctor() {
             return this.activeComponent === 'ListDoctor'
         },

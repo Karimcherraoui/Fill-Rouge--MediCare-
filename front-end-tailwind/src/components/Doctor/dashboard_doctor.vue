@@ -1,5 +1,5 @@
 <template >
-    <div class="flex flex-cols ">
+    <div class="flex flex-cols h-screen">
 
         <aside
             class=" flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">

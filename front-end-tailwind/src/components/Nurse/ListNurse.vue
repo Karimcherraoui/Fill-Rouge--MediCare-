@@ -102,7 +102,6 @@
         </div>
     </div>
 </div>
-<!-- <popup  :myProp="isModalVisible" @closeModal="closeModal"/> -->
 <editPatient v-if="buttonTrigger" :TogglePopup="TogglePopup" buttonName="buttonTrigger" />
 
 </template>

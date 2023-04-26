@@ -1,5 +1,5 @@
 <template >
-    <div class="flex flex-cols ">
+    <div class="flex flex-cols h-screen">
 
         <aside
             class="flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
@@ -58,13 +58,13 @@
                             <img class="w-7 h-7 " src="@/images/listPatient.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">List Patient</span>
                         </a>
-                        <a @click="toggleAddPatient"
+                        <a @click="toggleActiveComponent('AddPatients')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/patient.png" alt="">
                             <span class="mx-4 text-sm font-medium text-white">Add Patient</span>
                         </a>
-                        <a @click="toggleAddPatient"
+                        <a @click="toggleActiveComponent('AddPatints')"
                             class="flex items-center px-3 py-2 text-gray-200 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700"
                             href="#">
                             <img class="w-7 h-7 " src="@/images/medical-record.png" alt="">
@@ -118,68 +118,7 @@
 
 
                 <div class="mt-4">
-                    <div class="flex flex-wrap -mx-6 my-4">
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
-                            <div class="flex items-center px-2 py-2 bg-green-100 rounded-md shadow-lg">
-                                <div
-                                    class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-teal-600 bg-teal-100 rounded-full mr-6">
-                                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <span class="block text-xl font-bold">139</span>
-                                    <span class="block text-gray-500">Hours spent on lections</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
-                            <div class="flex items-center px-2 py-2 bg-green-100 rounded-md shadow-lg">
-                                <div
-                                    class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-100 rounded-full mr-6">
-                                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
-                                        <path fill="#fff"
-                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-xl font-bold">25</span>
-                                    <span class="block text-gray-500">Lections left</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                            <div class="flex items-center px-2 py-2 bg-green-100 rounded-md shadow-lg">
-                                <div
-                                    class="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-yellow-600 bg-yellow-100 rounded-full mr-6">
-                                    <svg aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                        class="h-6 w-6">
-                                        <path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z" />
-                                        <path fill="#fff"
-                                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <span class="block text-xl font-bold">25</span>
-                                    <span class="block text-gray-500">Lections left</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="flex flex-wrap -mx-6">
-
-
-                    </div>
+                   
                 </div>
 
 
@@ -236,24 +175,7 @@ export default {
           this.getPatients();
       },
     methods: {
-        toggleDAshboard() {
-            this.AddPatients = false;
-            this.AllUser = true;
-        },
-        toggleListDoctor() {
-            this.AddPatients = false;
-            this.AllUser = false;
-            this.ListDoctor = true;
-
-        },
-        toggleAddPatient() {
-            this.AllUser = false;
-            this.AddPatients = true;
-            this.activeComponent = '';
-
-
-            //   this.activeComponent = componentName;
-        },
+      
         toggleActiveComponent(componentName) {
             console.log('test')
             this.AllUser = false;

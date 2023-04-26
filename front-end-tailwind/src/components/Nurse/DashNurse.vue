@@ -1,5 +1,5 @@
 <template>
-  <section class="grid md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 xl:grid-flow-col gap-6 mb-10">
+  <section class="mt-20 grid md:grid-cols-2 xl:grid-cols-3 xl:grid-rows-3 xl:grid-flow-col gap-6 mb-10">
                 <div class="row-span-3 bg-white shadow-lg rounded-lg">
                     <div class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
                         <span>List of Doctors </span>
@@ -19,10 +19,7 @@
                     <div class="overflow-y-auto" style="max-height: 24rem;">
                         <ul class="p-6 space-y-6" v-for="doctor in doctors" :key="doctor.id">
                             <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/82.jpg"
-                                        alt="Annette Watson profile picture">
-                                </div>
+                             
                                 <span class="text-gray-600">{{ doctor.name }}</span>
                             </li>
                            
@@ -52,10 +49,7 @@
                     <div class="overflow-y-auto" style="max-height: 24rem;">
                         <ul class="p-6 space-y-6" v-for="patient in patients" :key="patient.id">
                             <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/82.jpg"
-                                        alt="Annette Watson profile picture">
-                                </div>
+                            
                                 <span class="text-gray-600">{{ patient.name }}</span>
                             </li>
                            
@@ -69,7 +63,7 @@
 
                 <div class="row-span-3 bg-white shadow-lg rounded-lg">
                     <div class="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
-                        <span>List of Appointment </span>
+                        <span>List of Nurse </span>
                         <button type="button"
                             class="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600"
                             id="options-menu" aria-haspopup="true" aria-expanded="true">
@@ -84,13 +78,12 @@
                         <!-- Refer here for full dropdown menu code: https://tailwindui.com/components/application-ui/elements/dropdowns -->
                     </div>
                     <div class="overflow-y-auto" style="max-height: 24rem;">
-                        <ul class="p-6 space-y-6" v-for="doctor in doctors" :key="doctor.id">
+                        <ul class="p-6 space-y-6"  v-for="nurse in nurses" :key="nurse.id">
                             <li class="flex items-center">
-                                <div class="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/82.jpg"
-                                        alt="Annette Watson profile picture">
-                                </div>
-                                <span class="text-gray-600">{{ doctor.name }}</span>
+                              
+                                <span class="text-gray-600">
+                                    {{ nurse.name }}
+                                </span>
                             </li>
                            
                         </ul>
@@ -107,12 +100,14 @@
       data() {
           return {
               patients: [],
-              doctors: []
+              doctors: [],
+              nurses: [],
           }
       },
       mounted() {
           this.getPatients();
           this.getDoctor();
+          this.getNurses();
 
 
       },
@@ -132,6 +127,16 @@
                 .then(response => {
                     console.log(response.data.doctor)
                     this.doctors = response.data.doctor;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        },
+        getNurses() {
+            axios.get('http://127.0.0.1:8000/api/nurse/getAllNurse')
+                .then(response => {
+                    console.log(response.data.nurse)
+                    this.nurses = response.data.nurse;
                 })
                 .catch(error => {
                     console.log(error);

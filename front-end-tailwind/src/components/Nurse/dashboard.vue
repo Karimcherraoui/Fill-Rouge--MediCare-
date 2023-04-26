@@ -1,5 +1,5 @@
 <template >
-    <div class="flex flex-cols ">
+    <div class="flex flex-cols h-screen">
 
         <aside
             class="flex flex-col w-64 px-5 py-8 overflow-y-auto bg-gradient-to-l from-green-500 to-green-700 dark:bg-gray-900 dark:border-gray-700">
@@ -219,24 +219,7 @@ export default {
 
     },
     methods: {
-        // toggleDAshboard() {
-        //     this.AddPatients = false;
-        //     this.AllUser = true;
-        // },
-        // toggleListDoctor() {
-        //     this.AddPatients = false;
-        //     this.AllUser = false;
-        //     this.ListDoctor = true;
-
-        // },
-        // toggleAddPatient() {
-        //     this.AllUser = false;
-        //     this.AddPatients = true;
-        //     this.activeComponent = '';
-
-
-        //     //   this.activeComponent = componentName;
-        // },
+      
         toggleActiveComponent(componentName) {
             console.log('test')
             this.AllUser = false;

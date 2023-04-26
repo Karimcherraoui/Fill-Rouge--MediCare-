@@ -75,6 +75,7 @@ export default {
             localStorage.setItem('id', response.data.patient.id)
             localStorage.setItem('email', response.data.patient.email)
             localStorage.setItem('userType', 'is patient')
+            localStorage.setItem('name', response.data.patient.name)
 
           // Redirect to dashboard or other page after successful login
           this.$router.push('/dashboardPatient')

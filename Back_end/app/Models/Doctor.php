@@ -33,12 +33,5 @@ class Doctor extends Model
     {
         return $this->hasMany(MedicalRecord::class);
     }
-    // public function speciality()
-    // {
-    //     return $this->belongsTo(Speciality::class);
-    // }
-    public function appointments()
-    {
-        return $this->hasManyThrough(Appointment::class, MedicalRecord::class);
-    }
+  
 }
